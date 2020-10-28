@@ -27,12 +27,12 @@ public class DoorOpeningScript : MonoBehaviour
     void Update()
     {
         //the script that opens the door
-        // this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(xPos, yPos, zPos), Time.deltaTime * speed);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(xPos, yPos, zPos), Time.deltaTime * speed);
     }
 
     // this should open the door, hopefully fully, else we can take a look at that (i have not been able to test this yet since my unity is an absolute asshole atm)
     public void doorOpen()
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(xPos, yPos, zPos), Time.deltaTime * speed);
+        //this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(xPos, yPos, zPos), Time.deltaTime * speed);
     }
 }
