@@ -10,8 +10,19 @@ public class DoorOpeningScript : MonoBehaviour
     public float xPos;
     public float yPos;
     public float zPos;
+    //the arch the door is in
+    public GameObject doorArch;
+    Material archMaterial;
+    Color redGlow;
 
-
+    private void Start()
+    {
+        // get the material of the arch (the first one) and sets the emission color
+        // Lav nyt lys til rammen, og smid det ind som doorArch i gameObject.
+        archMaterial = doorArch.GetComponent<Renderer>().material;
+        ColorUtility.TryParseHtmlString("#FF0000", out redGlow);
+        archMaterial.SetColor("_EmissionColor", redGlow);
+    }
     // Update is called once per frame
     void Update()
     {

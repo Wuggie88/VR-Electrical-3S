@@ -144,6 +144,7 @@ MonoBehaviour:
   xPos: -2.66
   yPos: 0
   zPos: 0
+  doorArch: {fileID: 0}
 --- !u!1 &17978260
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +201,7 @@ MonoBehaviour:
   xPos: -2.587
   yPos: 0.000001257544
   zPos: 0
+  doorArch: {fileID: 1242208918}
 --- !u!1001 &380398124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,6 +475,7 @@ MonoBehaviour:
   xPos: 0
   yPos: 0
   zPos: 0
+  doorArch: {fileID: 0}
 --- !u!1001 &517433756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1213,6 +1216,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 468868, guid: 8db5b99e1590340a4a7166fa4c9f9cf2, type: 3}
   m_PrefabInstance: {fileID: 1242208916}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1242208918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 143022, guid: 8db5b99e1590340a4a7166fa4c9f9cf2, type: 3}
+  m_PrefabInstance: {fileID: 1242208916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1242208919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 130788, guid: 8db5b99e1590340a4a7166fa4c9f9cf2, type: 3}
+  m_PrefabInstance: {fileID: 1242208916}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1411792196
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1825,6 +1838,7 @@ MonoBehaviour:
   xPos: -2.72
   yPos: 0.000001257544
   zPos: 0
+  doorArch: {fileID: 1242208919}
 --- !u!1001 &1915015626
 PrefabInstance:
   m_ObjectHideFlags: 0
