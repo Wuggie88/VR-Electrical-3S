@@ -16,9 +16,12 @@ public class RobotMovement : MonoBehaviour
 
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public GameObject projectile;
 
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+
+    public float Health;
 
     private void Awake()
     {
@@ -85,6 +88,45 @@ public class RobotMovement : MonoBehaviour
 
         transform.LookAt(player);
 
+        if (!alreadyAttacked)
+        {
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+
+            alreadyAttacked = true;
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
 
     }
+
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        Health -= damage;
+
+        if (Health <= 0)
+        {
+            Invoke(nameof(DestroyEnemy), 0.5f);
+        }
+    }
+
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
+    }
 }
+
+    
