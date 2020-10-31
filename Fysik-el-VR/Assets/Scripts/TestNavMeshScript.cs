@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class TestNavMeshScript : MonoBehaviour
 {
     public Transform[] points;
-    private int destPoints = 0;
+    public int destPoints = 0;
     public int searchDistance;
     public Transform target;
     public NavMeshAgent agent;
@@ -35,7 +35,7 @@ public class TestNavMeshScript : MonoBehaviour
             agent.SetDestination(target.position);
         }
 
-        else if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        else if (!agent.pathPending && agent.remainingDistance < 1f)
         {
             GotoNextPoint();
         }
@@ -53,7 +53,6 @@ public class TestNavMeshScript : MonoBehaviour
 
         //picks the next point in the array at the destination, cycling to the start if needed.
         destPoints = (destPoints + 1) % points.Length;
-
 
     }
 }
