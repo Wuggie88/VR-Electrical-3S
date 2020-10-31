@@ -15,19 +15,37 @@ public class DoorButton : MonoBehaviour
 
     }
 
-    public void ButtonPush()
+    public void OnTriggerEnter(Collider other)
     {
-        // opens the doors when button is pushed, if puzzle is solved. (door points 4 is a placeholder and is always true atm)
+        //checks if the circuitboard is correct, then starts the couroutines for opening the doors.
         if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == 4)
         {
-            RDoor.GetComponent<DoorOpeningScript>().doorOpen();
-            LDoor.GetComponent<DoorOpeningScript>().doorOpen();
-        }
+            StartCoroutine(DoorOpens());
+            StartCoroutine(DoorOpens2());
 
-        // what happens if the puzzle ain't solved when pushed
-        else
-        {
-            //write whatever we want to happen, if the button is pressed and the puzzle ain't solved. (could be a sound being played)
         }
+    }
+
+    //sends signal to open the right door as long as it's not in "open" position
+    IEnumerator DoorOpens()
+    {
+        do
+        {
+            RDoor.GetComponent<DoorOpeningScript>().doorOpen();
+            yield return new WaitForEndOfFrame();
+            //while the X-pos is not right (the axis that we open the door on)
+        } while (RDoor.transform.position.x != RDoor.GetComponent<DoorOpeningScript>().xPos);
+
+    }
+
+    //sends signal to open the left door as long as it's not in "open" position
+    IEnumerator DoorOpens2()
+    {
+        do
+        {
+            LDoor.GetComponent<DoorOpeningScript>().doorOpen();
+            yield return new WaitForEndOfFrame();
+            //while the X-pos is not right (the axis that we open the door on)
+        } while (LDoor.transform.position.x != LDoor.GetComponent<DoorOpeningScript>().xPos);
     }
 }
