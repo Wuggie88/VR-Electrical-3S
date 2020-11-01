@@ -25,16 +25,15 @@ public class RobotMovement : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
-        agent = GetComponent<NavMeshAgent>();
+        
     }
-
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.Find("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
