@@ -47,7 +47,7 @@ public class CircuitComponent : MonoBehaviour
         meshesToPaint = new List<MeshRenderer>();
         foreach (Transform child in transform)
         {
-            if (child.tag == "Wire")
+            if (child.tag == "CircuitPart")
             {
                 meshesToPaint.Add(child.gameObject.GetComponent<MeshRenderer>());
             }
