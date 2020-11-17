@@ -318,9 +318,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  xPos: 5.5
-  yPos: 0.000001257544
-  zPos: 0
+  xPos: 5.7
+  yPos: -0.9990089
+  zPos: 19.98018
   doorArch: {fileID: 1242208918}
 --- !u!1001 &380398124
 PrefabInstance:
@@ -1266,9 +1266,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac587fc1aa89f634ebf6ce369409a3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RDoor: {fileID: 0}
-  LDoor: {fileID: 0}
-  CircuitBoard: {fileID: 0}
+  RDoor: {fileID: 1691602966}
+  LDoor: {fileID: 828052199}
+  CircuitBoard: {fileID: 2113255158}
 --- !u!65 &882529903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1277,7 +1277,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882529900}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2423,7 +2423,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691602966}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 2.75, y: 0.0000012575437, z: 0}
+  m_LocalPosition: {x: 2.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1691821884}
@@ -2614,9 +2614,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  xPos: -2.75
-  yPos: -1
-  zPos: 20
+  xPos: -5.75
+  yPos: -0.9990475
+  zPos: 20.98003
   doorArch: {fileID: 1242208919}
 --- !u!23 &1912621994
 MeshRenderer:
