@@ -32,7 +32,7 @@ public class RobotMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
