@@ -5,7 +5,6 @@ using UnityEngine;
 public class LaserShooting : MonoBehaviour
 {
     public GameObject LaserBulletPrefab;
-    public GameObject GunCylinder;
     private OVRGrabbable ovrGrabbable;
     public OVRInput.Button shootingButton;
     private float speed = 1;
@@ -21,8 +20,8 @@ public class LaserShooting : MonoBehaviour
     {
         if (ovrGrabbable.isGrabbed && OVRInput.GetDown(shootingButton))
         {
-            GameObject LaserBullet = Instantiate(LaserBulletPrefab, GunCylinder.transform.position, Quaternion.identity);
-    
+            GameObject LaserBullet = Instantiate(LaserBulletPrefab);
+            LaserBullet.transform.position = transform.position + transform.forward * speed;
         }
     }
 }
