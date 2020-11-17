@@ -2285,7 +2285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1566100906}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d1a7708e76601b4ea829921c33bc624, type: 3}
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
@@ -2294,7 +2294,6 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: 1113774639}
-  m_materialColorField: 
 --- !u!54 &1566100909
 Rigidbody:
   m_ObjectHideFlags: 0
