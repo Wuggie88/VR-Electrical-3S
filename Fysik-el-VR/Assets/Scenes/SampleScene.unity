@@ -2810,7 +2810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  xPos: -5.75
+  xPos: -5.7
   yPos: -0.9990475
   zPos: 20.98003
   doorArch: {fileID: 1242208919}
