@@ -2231,7 +2231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
+  m_allowOffhandGrab: 0
   m_snapPosition: 1
   m_snapOrientation: 1
   m_snapOffset: {fileID: 1411060193}
@@ -2266,7 +2266,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaserBulletPrefab: {fileID: 1704287810168962571, guid: 1c295322ca6e2b945a1ff3eee6169884, type: 3}
+  GunCylinder: {fileID: 1566100911}
   shootingButton: 2105344
+--- !u!1 &1566100911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1156877129745062, guid: 392a05bd229c33043ae112a856120172, type: 3}
+  m_PrefabInstance: {fileID: 1566100905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1670099329
 PrefabInstance:
   m_ObjectHideFlags: 0
