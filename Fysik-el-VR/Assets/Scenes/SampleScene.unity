@@ -2232,8 +2232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 1
-  m_snapOrientation: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
   m_snapOffset: {fileID: 1411060193}
   m_grabPoints:
   - {fileID: 1113774639}
@@ -2266,7 +2266,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LaserBulletPrefab: {fileID: 1704287810168962571, guid: 1c295322ca6e2b945a1ff3eee6169884, type: 3}
+<<<<<<< Updated upstream
   shootingButton: 2105344
+=======
+  GunCylinder: {fileID: 0}
+  shootingButton: 0
+>>>>>>> Stashed changes
 --- !u!1001 &1670099329
 PrefabInstance:
   m_ObjectHideFlags: 0
