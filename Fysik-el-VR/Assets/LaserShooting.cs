@@ -22,8 +22,8 @@ public class LaserShooting : MonoBehaviour
         if (ovrGrabbable.isGrabbed && OVRInput.GetDown(shootingButton))
         {
             GameObject LaserBullet = Instantiate(LaserBulletPrefab, GunCylinder.transform.position, Quaternion.identity);
-            LaserBullet.transform.position += transform.forward * speed * Time.deltaTime;
-          
+            //LaserBullet.transform.position += transform.forward * speed * Time.deltaTime;
+            LaserBullet.GetComponent<Rigidbody>().AddForce(transform.forward * speed);
         }
     }
 }
