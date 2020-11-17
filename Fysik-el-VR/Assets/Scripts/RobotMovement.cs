@@ -60,7 +60,7 @@ public class RobotMovement : MonoBehaviour
 
         Vector3 distanceToWalkPoint = transform.position - walkpoint;
 
-        if (distanceToWalkPoint.magnitude < 1f)
+        if (distanceToWalkPoint.magnitude < 2f)
             walkPointSet = false;
     }
 
