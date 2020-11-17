@@ -7,6 +7,7 @@ public class LaserShooting : MonoBehaviour
     public GameObject LaserBulletPrefab;
     private OVRGrabbable ovrGrabbable;
     public OVRInput.Button shootingButton;
+    private float speed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class LaserShooting : MonoBehaviour
         if (ovrGrabbable.isGrabbed && OVRInput.GetDown(shootingButton))
         {
             GameObject LaserBullet = Instantiate(LaserBulletPrefab);
+            LaserBullet.transform.position = transform.position + transform.forward * speed;
         }
     }
 }
