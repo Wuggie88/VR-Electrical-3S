@@ -91,9 +91,12 @@ public class RobotMovement : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            Rigidbody rb = Instantiate(projectile, Barrel.transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+
+           
+            Rigidbody rb = Instantiate(projectile, Barrel.transform.position, Barrel.transform.rotation).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
