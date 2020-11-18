@@ -2271,7 +2271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25639442cb5a03a4eb71e7244a73db29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaserBulletPrefab: {fileID: 1704287810168962571, guid: 1c295322ca6e2b945a1ff3eee6169884, type: 3}
+  LaserBulletPrefab: {fileID: 3887288305339538207, guid: ad711b37046bef24c82d42b678d72494, type: 3}
   GunCylinder: {fileID: 1566100911}
   shootingButton: 2105344
 --- !u!1 &1566100911 stripped
