@@ -309,11 +309,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4214740600626620, guid: b09191006fa14d64d97df0de8b286d1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.97
+      value: -1.8579881
       objectReference: {fileID: 0}
     - target: {fileID: 4214740600626620, guid: b09191006fa14d64d97df0de8b286d1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.49
+      value: -0.7617099
       objectReference: {fileID: 0}
     - target: {fileID: 4214740600626620, guid: b09191006fa14d64d97df0de8b286d1f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -562,6 +562,7 @@ MonoBehaviour:
   playerInSightRange: 1
   playerInAttackRange: 0
   Health: 120
+  Barrel: {fileID: 1206376424}
 --- !u!1 &436220580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 169994, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
@@ -1791,6 +1792,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 480456, guid: 56f887c8f9289447895ae8a07be226ec, type: 3}
   m_PrefabInstance: {fileID: 1178879290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1206376424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1011118863300308, guid: b09191006fa14d64d97df0de8b286d1f, type: 3}
+  m_PrefabInstance: {fileID: 380398124}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1242208916
 PrefabInstance:
