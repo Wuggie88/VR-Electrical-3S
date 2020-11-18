@@ -654,7 +654,7 @@ MonoBehaviour:
     m_Bits: 512
   walkpoint: {x: 0, y: 0, z: 0}
   walkPointRange: 20
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 1
   projectile: {fileID: 8370777314753085734, guid: e87d7a1be709b7b48843ddee8e5e690e, type: 3}
   sightRange: 15
   attackRange: 10
@@ -2511,6 +2511,7 @@ MonoBehaviour:
   LaserBulletPrefab: {fileID: 3887288305339538207, guid: ad711b37046bef24c82d42b678d72494, type: 3}
   GunCylinder: {fileID: 1566100911}
   shootingButton: 2105344
+  speed: 1
 --- !u!1 &1566100911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1156877129745062, guid: 392a05bd229c33043ae112a856120172, type: 3}
