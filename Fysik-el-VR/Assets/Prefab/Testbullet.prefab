@@ -11,7 +11,11 @@ GameObject:
   - component: {fileID: 3887288305339538206}
   - component: {fileID: 3438627754343379402}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - component: {fileID: 6030384155452427614}
+=======
+  - component: {fileID: 4028441451185320278}
+>>>>>>> Stashed changes
 =======
   - component: {fileID: 4028441451185320278}
 >>>>>>> Stashed changes
@@ -54,8 +58,13 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 --- !u!114 &6030384155452427614
 MonoBehaviour:
+=======
+--- !u!65 &4028441451185320278
+BoxCollider:
+>>>>>>> Stashed changes
 =======
 --- !u!65 &4028441451185320278
 BoxCollider:
@@ -66,6 +75,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3887288305339538207}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e93448b938c838b438f94a5147d930bb, type: 3}
@@ -74,12 +84,17 @@ BoxCollider:
   MaxLifeTime: 2
   damage: 0
 =======
+=======
+>>>>>>> Stashed changes
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.01, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 --- !u!1 &9202652497038833412
 GameObject:
