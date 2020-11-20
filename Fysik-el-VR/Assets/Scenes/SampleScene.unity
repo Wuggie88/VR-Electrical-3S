@@ -2671,7 +2671,7 @@ MonoBehaviour:
   LaserBulletPrefab: {fileID: 1410728642833045057, guid: f51046b5a75a2714491b232f8a2fbf88, type: 3}
   GunCylinder: {fileID: 1566100911}
   shootingButton: 2105344
-  speed: 10
+  speed: 200
 --- !u!1 &1566100911 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1156877129745062, guid: 392a05bd229c33043ae112a856120172, type: 3}
