@@ -6,7 +6,7 @@ public class Healthsystem : MonoBehaviour
 {
     
     public int health;
-    public int damage;
+   
 
     public Collider FjendtligSkud;
 
@@ -18,15 +18,9 @@ public class Healthsystem : MonoBehaviour
 
 
 
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other == FjendtligSkud)
-        {
-            TakeDamage();
-        }
-    }
 
-    public void TakeDamage()
+
+    public void TakeDamage(int damage)
     {
 
         health -= damage;

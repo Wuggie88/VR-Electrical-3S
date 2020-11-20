@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projektile : MonoBehaviour
+public class ProjektileEnemy : MonoBehaviour
 {
-
-
+    // Start is called before the first frame update
     public float MaxLifeTime = 2f;
 
 
@@ -21,7 +20,7 @@ public class Projektile : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             other.gameObject.GetComponent<Healthsystem>().TakeDamage(damage);
 
@@ -29,7 +28,4 @@ public class Projektile : MonoBehaviour
 
 
     }
-
 }
-
-

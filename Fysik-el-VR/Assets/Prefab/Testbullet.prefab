@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3887288305339538206}
   - component: {fileID: 3438627754343379402}
+  - component: {fileID: 6030384155452427614}
   m_Layer: 0
   m_Name: Testbullet
   m_TagString: Untagged
@@ -48,6 +49,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6030384155452427614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3887288305339538207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e93448b938c838b438f94a5147d930bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLifeTime: 2
+  damage: 0
 --- !u!1 &9202652497038833412
 GameObject:
   m_ObjectHideFlags: 0
