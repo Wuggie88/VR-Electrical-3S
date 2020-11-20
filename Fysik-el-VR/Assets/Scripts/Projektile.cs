@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Projektile : MonoBehaviour
 {
-
-
     public float MaxLifeTime = 2f;
 
-
     public int damage;
-
 
     // Start is called before the first frame update
     private void Start()
