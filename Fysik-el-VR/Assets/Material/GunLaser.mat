@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: GunLaser
   m_Shader: {fileID: 4800000, guid: 20db1f0dad220cf4e8e49b6e6db7b68c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4

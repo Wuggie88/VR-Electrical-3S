@@ -136,6 +136,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 1704287810168962582, guid: 1c295322ca6e2b945a1ff3eee6169884, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbee0bb8c6423e3479e6de94b9e8d2ff, type: 2}
     m_RemovedComponents:
     - {fileID: 5278861817249792632, guid: 1c295322ca6e2b945a1ff3eee6169884, type: 3}
     - {fileID: 1704287810168962569, guid: 1c295322ca6e2b945a1ff3eee6169884, type: 3}
