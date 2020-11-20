@@ -493,6 +493,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 417786423, guid: b09191006fa14d64d97df0de8b286d1f, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1410728642833045057, guid: c22fd1fdfcdc3f442a1d9da3330cf1a2, type: 3}
     - target: {fileID: 1508817308227530, guid: b09191006fa14d64d97df0de8b286d1f, type: 3}
       propertyPath: m_Name
       value: Robo1
@@ -2664,7 +2668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25639442cb5a03a4eb71e7244a73db29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LaserBulletPrefab: {fileID: 3887288305339538207, guid: ad711b37046bef24c82d42b678d72494, type: 3}
+  LaserBulletPrefab: {fileID: 1410728642833045057, guid: f51046b5a75a2714491b232f8a2fbf88, type: 3}
   GunCylinder: {fileID: 1566100911}
   shootingButton: 2105344
   speed: 10
