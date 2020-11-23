@@ -16,7 +16,8 @@ public class DoorButton : MonoBehaviour
         //coroutine for setting up the door to get the right circuit
         StartCoroutine(SetupButton());
 
-
+        //sets the errorSound to what ever audioSource is attached to this object.
+        errorSound = GetComponent<AudioSource>();
         //test til at dørene virker
         /* 
         if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == 4)
