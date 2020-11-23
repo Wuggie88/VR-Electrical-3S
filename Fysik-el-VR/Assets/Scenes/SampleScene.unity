@@ -1451,6 +1451,7 @@ MonoBehaviour:
   RDoor: {fileID: 1691602966}
   LDoor: {fileID: 828052199}
   CircuitBoard: {fileID: 2113255158}
+  errorSound: {fileID: 8300000, guid: 10c7618232bfbb84b89ea0d9d6cbe85f, type: 3}
 --- !u!65 &882529903
 BoxCollider:
   m_ObjectHideFlags: 0

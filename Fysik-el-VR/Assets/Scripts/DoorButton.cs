@@ -7,6 +7,7 @@ public class DoorButton : MonoBehaviour
     public GameObject RDoor;
     public GameObject LDoor;
     public GameObject CircuitBoard;
+    public AudioSource errorSound;
 
 
     // Start is called before the first frame update
@@ -14,7 +15,8 @@ public class DoorButton : MonoBehaviour
     {
         //coroutine for setting up the door to get the right circuit
         StartCoroutine(SetupButton());
-        
+
+
         //test til at dørene virker
         /* 
         if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == 4)
@@ -41,6 +43,11 @@ public class DoorButton : MonoBehaviour
             StartCoroutine(DoorOpens());
             StartCoroutine(DoorOpens2());
 
+        }
+
+        else
+        {
+            errorSound.Play();
         }
         
     }
