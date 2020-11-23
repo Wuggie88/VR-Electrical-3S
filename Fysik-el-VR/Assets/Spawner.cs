@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+
+    //makes an empty prefabs list
     public GameObject[] prefabs;
     public int s = 0;
 
@@ -11,8 +13,10 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        s = Random.Range(0, 4);
+        //Picks a random number within the range of the prefabs list.
+        s = Random.Range(0, prefabs.Length);
 
+        //instantiates the prefab picked by the random number generator "s"
         GameObject Circuit = Instantiate(prefabs[s], transform.position, transform.rotation);
         
     }

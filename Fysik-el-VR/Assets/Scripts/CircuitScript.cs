@@ -6,8 +6,14 @@ public class CircuitScript : MonoBehaviour
 {
     //placeholder for how all of this works nothing in here is written yet, but i this to test if i could attach it to other scripts.
 
+    //the current points of the circuit
     public float doorpoints = 4;
+
+    //the target needed for the circuit to be correctly solved
     public float target = 5;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
