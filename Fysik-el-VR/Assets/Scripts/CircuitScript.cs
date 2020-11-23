@@ -6,7 +6,8 @@ public class CircuitScript : MonoBehaviour
 {
     //placeholder for how all of this works nothing in here is written yet, but i this to test if i could attach it to other scripts.
 
-    public int doorpoints = 4;
+    public float doorpoints = 4;
+    public float target = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,12 @@ public class CircuitScript : MonoBehaviour
     {
         
     }
+
+    /*
+     * Use this as the Circuit script
+     * The door button will set the requirement as "target" so set that in your prefab for what the solution should be.
+     * Use doorpoints, as the current points obtained (This is the thing that should be updated by batteries and resistors being put in the circuit)
+     */
 
     
 }

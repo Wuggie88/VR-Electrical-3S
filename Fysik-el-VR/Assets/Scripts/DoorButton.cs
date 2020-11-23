@@ -12,6 +12,8 @@ public class DoorButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        StartCoroutine(SetupButton());
         
         //test til at dørene virker
         /* 
@@ -34,7 +36,7 @@ public class DoorButton : MonoBehaviour
     {
         //checks if the circuitboard is correct, then starts the couroutines for opening the doors.
         
-        if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == 4)
+        if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == CircuitBoard.GetComponent<CircuitScript>().target)
         {
             StartCoroutine(DoorOpens());
             StartCoroutine(DoorOpens2());
@@ -64,5 +66,18 @@ public class DoorButton : MonoBehaviour
             yield return new WaitForEndOfFrame();
             //while the X-pos is not right (the axis that we open the door on)
         } while (LDoor.transform.position.x != LDoor.GetComponent<DoorOpeningScript>().xPos);
+    }
+
+    IEnumerator SetupButton()
+    {
+        Debug.Log("coroutine started");
+
+        yield return new WaitForSeconds(5);
+
+        CircuitBoard = GameObject.FindGameObjectWithTag("Circuit");
+
+        Debug.Log(CircuitBoard.GetComponent<CircuitScript>().target);
+
+
     }
 }
