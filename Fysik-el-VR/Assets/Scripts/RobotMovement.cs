@@ -25,7 +25,7 @@ public class RobotMovement : MonoBehaviour
     public float Health;
 
     public GameObject Barrel;
-    public int SP;
+
     private void Awake()
     {
         
@@ -37,7 +37,7 @@ public class RobotMovement : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-        SP = GetComponent<RoboSpawn>().NumberOfSpawn;
+
 
         
     }
@@ -124,8 +124,9 @@ public class RobotMovement : MonoBehaviour
 
     private void DestroyEnemy()
     {
+
         Destroy(gameObject);
-        SP--;
+
     }
 
     private void OnDrawGizmosSelected()

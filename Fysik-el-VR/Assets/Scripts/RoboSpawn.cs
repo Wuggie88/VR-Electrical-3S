@@ -19,10 +19,18 @@ public class RoboSpawn : MonoBehaviour
         Invoke("CheckTheSpawn", 1);
     }
 
+   /* private void Update()
+    {
+        if(NumberOfSpawn == 0 && fail == true)
+        {
+            Invoke
+        }
+    }*/
+
     void CheckTheSpawn()
     {
         //check antal spawn ud fra level og base
-        if (NumberOfSpawn <= AllowedSpawn)
+        if (NumberOfSpawn < AllowedSpawn)
         {
 
             Invoke("SpawnTheRobo", 2);
@@ -51,6 +59,10 @@ public class RoboSpawn : MonoBehaviour
         {
             fail = false;
             Invoke("CheckTheSpawn", 2);
+        }
+        else
+        {
+            Invoke("NoMoreBots", 2);
         }
         //slut spawn indtil næste level
         //start spawn igen

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Healthsystem : MonoBehaviour
 {
-    public int health;
+    public int health = 100;
+
+    public int SP;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = 100;
+        SP = GetComponent<RoboSpawn>().NumberOfSpawn;
     }
 
     public void TakeDamage(int damage)
@@ -30,6 +32,7 @@ public class Healthsystem : MonoBehaviour
         }
         else
         {
+            SP--;
             Destroy(this);
         }
         
