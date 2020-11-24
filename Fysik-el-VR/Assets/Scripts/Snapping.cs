@@ -7,6 +7,7 @@ public class Snapping : MonoBehaviour
     bool snapped = false;
     GameObject snapObject; // Object to snap.
     public bool isGrabbed = false;
+    public float values = 0;
 
     // Update is called once per frame
     void Update()
@@ -28,11 +29,10 @@ public class Snapping : MonoBehaviour
         {
             snapObject = other.gameObject;
             snapped = true;
+
+            values = snapObject.GetComponent<componentScript>().value;
+
         }
     }
-    /*
-    void OnTriggerStay(Collider other)
-    {
-        
-    }*/
+ 
 }
