@@ -10,6 +10,7 @@ public class RobotMovement : MonoBehaviour
     public NavMeshAgent agent;
     public LayerMask WhatIsGround, WhatIsPlayer;
 
+
     public Vector3 walkpoint;
     bool walkPointSet;
     public float walkPointRange;
@@ -24,7 +25,7 @@ public class RobotMovement : MonoBehaviour
     public float Health;
 
     public GameObject Barrel;
-
+    public int SP;
     private void Awake()
     {
         
@@ -36,6 +37,9 @@ public class RobotMovement : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        SP = GetComponent<RoboSpawn>().NumberOfSpawn;
+
+        
     }
 
     // Update is called once per frame
@@ -121,6 +125,7 @@ public class RobotMovement : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+        SP--;
     }
 
     private void OnDrawGizmosSelected()

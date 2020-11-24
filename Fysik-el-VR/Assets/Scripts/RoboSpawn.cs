@@ -5,9 +5,13 @@ using UnityEngine;
 public class RoboSpawn : MonoBehaviour
 {
     public GameObject EnemyRobot;
+    public GameObject Spawnpoint;
 
     public int NumberOfSpawn;
     public int AllowedSpawn;
+
+    public bool fail = false;
+
 
     private void Start()
     {
@@ -20,6 +24,7 @@ public class RoboSpawn : MonoBehaviour
         //check antal spawn ud fra level og base
         if (NumberOfSpawn <= AllowedSpawn)
         {
+
             Invoke("SpawnTheRobo", 2);
         }
         else
@@ -33,11 +38,20 @@ public class RoboSpawn : MonoBehaviour
     void SpawnTheRobo()
     {
         // spawn en enkelt robot og check om vi har nået maks
-        Instantiate(EnemyRobot);
+        Instantiate(EnemyRobot, Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+        NumberOfSpawn++;
+
+        Invoke("CheckTheSpawn", 2);
+
     }
 
     void NoMoreBots()
     {
+        if (fail == true)
+        {
+            fail = false;
+            Invoke("CheckTheSpawn", 2);
+        }
         //slut spawn indtil næste level
         //start spawn igen
     }
