@@ -55,6 +55,8 @@ public class CircuitScript : MonoBehaviour
 
         doorpoints = batteryValue * (R1Value + R2Value + R3Value);
 
+        Debug.Log(doorpoints);
+
 
     }
     /*

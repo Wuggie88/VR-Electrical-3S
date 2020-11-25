@@ -8,6 +8,7 @@ public class Snapping : MonoBehaviour
     GameObject snapObject; // Object to snap.
     public bool isGrabbed = false;
     public float values = 0;
+    public GameObject circuitBoard;
 
     // Update is called once per frame
     void Update()
@@ -31,6 +32,8 @@ public class Snapping : MonoBehaviour
             snapped = true;
 
             values = snapObject.GetComponent<componentScript>().value;
+
+            circuitBoard.GetComponent<CircuitScript>().setupComponent();
 
         }
     }

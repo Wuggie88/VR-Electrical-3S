@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CircuitPart
   - Circuit
+  - Component
   layers:
   - Default
   - TransparentFX
