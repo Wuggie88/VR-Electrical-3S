@@ -8,6 +8,8 @@ public class HealthItemAdd : MonoBehaviour
     private int DeSpawnTime = 2;
     private OVRGrabbable ovrGrabbable;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +20,18 @@ public class HealthItemAdd : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ovrGrabbable.isGrabbed)
+        if (ovrGrabbable.isGrabbed == true)
         {
 
+            Invoke("DestroyTheHI", 2);
         }
+
     }
+
+    void DestroyTheHI()
+    {
+        
+    }
+
 }
+

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9116929313281842120}
   - component: {fileID: 5749601627784684230}
   - component: {fileID: -9004855399733902438}
+  - component: {fileID: -7398335641051681211}
   m_Layer: 0
   m_Name: HealthItem
   m_TagString: Untagged
@@ -114,3 +115,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &-7398335641051681211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792365027299454766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd1f90b8ee726a24ea5452fc4a2bc731, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

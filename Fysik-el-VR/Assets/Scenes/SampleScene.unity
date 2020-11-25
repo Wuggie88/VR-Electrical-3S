@@ -687,7 +687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &210240801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7136,7 +7136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a2d4bd972f9fe458d13b8c26359b2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyRobot: {fileID: 2189891747046888272, guid: fdc6c66defe3f4b48b203d68482aa300, type: 3}
+  EnemyRobot: {fileID: 5585434496611115324, guid: 371944167bd2e75499f3e4e7c17f4098, type: 3}
   Spawnpoint: {fileID: 1925497399}
   NumberOfSpawn: 0
   AllowedSpawn: 3
