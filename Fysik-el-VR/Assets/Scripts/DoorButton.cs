@@ -10,6 +10,7 @@ public class DoorButton : MonoBehaviour
     public AudioSource errorSound;
     public int failCounter = 0;
     public GameObject player;
+    public GameObject robotSpawner;
 
 
     // Start is called before the first frame update
@@ -99,6 +100,9 @@ public class DoorButton : MonoBehaviour
 
     IEnumerator failed()
     {
+
+        robotSpawner.GetComponent<RoboSpawn>().SpawnTheRobo();
+
         failCounter++;
 
         yield return new WaitForEndOfFrame();
