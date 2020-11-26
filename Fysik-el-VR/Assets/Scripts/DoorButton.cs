@@ -21,7 +21,7 @@ public class DoorButton : MonoBehaviour
         //sets the errorSound to what ever audioSource is attached to this object.
         errorSound = GetComponent<AudioSource>();
 
-
+        player = GameObject.FindGameObjectWithTag("Player");
 
         //test til at dørene virker
         /* 
