@@ -9,6 +9,12 @@ public class Snapping : MonoBehaviour
     public bool isGrabbed = false;
     public float values = 0;
     public GameObject circuitBoard;
+    Rigidbody snapBody;
+
+    void Awake()
+    {
+        snapBody = snapObject.GetComponent<Rigidbody>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -30,6 +36,7 @@ public class Snapping : MonoBehaviour
         {
             snapObject = other.gameObject;
             snapped = true;
+            snapBody.isKinematic = true;
 
             values = snapObject.GetComponent<componentScript>().value;
 
@@ -37,5 +44,11 @@ public class Snapping : MonoBehaviour
 
         }
     }
- 
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Component")
+            snapBody.isKinematic = false;
+    }
+
 }

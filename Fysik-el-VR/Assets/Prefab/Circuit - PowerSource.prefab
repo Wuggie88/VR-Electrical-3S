@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5230972039768945843}
   - component: {fileID: 7336266291686404390}
   - component: {fileID: 5165921426507663462}
+  - component: {fileID: 8930665133445788336}
   m_Layer: 0
-  m_Name: PowerSource
+  m_Name: Circuit - PowerSource
   m_TagString: Component
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6023803279287391590}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 3.992, y: 0.543, z: 19.969}
-  m_LocalScale: {x: 0.11, y: 0.11, z: 0.11}
+  m_LocalScale: {x: 0.14, y: 0.14, z: 0.14}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -112,3 +113,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.968187, y: 2.2000005, z: 2.5}
   m_Center: {x: -1.3840934, y: 0, z: -0.25}
+--- !u!114 &8930665133445788336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023803279287391590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caff6de7b0517504e9c284d02508ddd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
