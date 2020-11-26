@@ -5218,10 +5218,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorpoints: 4
-  battery: {fileID: 0}
-  R1: {fileID: 0}
-  R2: {fileID: 0}
-  R3: {fileID: 0}
+  battery: {fileID: 520721601}
+  R1: {fileID: 2077272034}
+  R2: {fileID: 1173894476}
+  R3: {fileID: 1802669355}
   batteryValue: 0
   R1Value: 0
   R2Value: 0

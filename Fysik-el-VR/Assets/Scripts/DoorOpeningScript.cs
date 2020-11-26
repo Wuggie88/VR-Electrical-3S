@@ -19,9 +19,12 @@ public class DoorOpeningScript : MonoBehaviour
     {
         // get the material of the arch (the first one) and sets the emission color
         // Lav nyt lys til rammen, og smid det ind som doorArch i gameObject.
+        
+        /*
         archMaterial = doorArch.GetComponent<Renderer>().material;
         ColorUtility.TryParseHtmlString("#FF0000", out redGlow);
         archMaterial.SetColor("_EmissionColor", redGlow);
+        */
     }
     // Update is called once per frame
     void Update()
