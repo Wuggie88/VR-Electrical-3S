@@ -3,7 +3,8 @@ guid: 900c80432c009844eaaeb14c44959441
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Healthdrop: {fileID: 1792365027299454766, guid: c06d6a02475f53b41b97974da86f3464, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -8,10 +8,25 @@ public class Healthsystem : MonoBehaviour
 
     public int SP;
 
+    public GameObject Healthdrop;
+
+    public int heal = 10;
+
     // Start is called before the first frame update
     void Start()
     {
         SP = GetComponent<RoboSpawn>().NumberOfSpawn;
+
+    }
+
+    private void Update()
+    {
+        if (health <= 0) Death();
+    }
+
+    public void HealThePlayer(int heal)
+    {
+        health += heal;
     }
 
     public void TakeDamage(int damage)
@@ -33,7 +48,8 @@ public class Healthsystem : MonoBehaviour
         else
         {
             SP--;
-            Destroy(this);
+            Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
+            Destroy(this.gameObject);
         }
         
     }

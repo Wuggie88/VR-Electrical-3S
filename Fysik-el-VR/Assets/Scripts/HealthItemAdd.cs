@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class HealthItemAdd : MonoBehaviour
 {
-    int AddingHealth;
+    int AddingHealth = 10;
     private int DeSpawnTime = 2;
     private OVRGrabbable ovrGrabbable;
+ 
 
     
 
@@ -15,6 +16,7 @@ public class HealthItemAdd : MonoBehaviour
     void Start()
     {
         ovrGrabbable = GetComponent<OVRGrabbable>();
+
     }
 
     // Update is called once per frame
@@ -22,15 +24,16 @@ public class HealthItemAdd : MonoBehaviour
     {
         if (ovrGrabbable.isGrabbed == true)
         {
+            GetComponent<Healthsystem>().HealThePlayer(AddingHealth);
 
-            Invoke("DestroyTheHI", 2);
+            Invoke("DestroyTheHI", 1);
         }
 
     }
 
     void DestroyTheHI()
     {
-        
+        Destroy(this.gameObject);
     }
 
 }

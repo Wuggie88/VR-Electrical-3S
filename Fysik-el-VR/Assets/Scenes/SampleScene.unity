@@ -2073,7 +2073,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.444
+      value: 18.919125
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2404,6 +2404,7 @@ MonoBehaviour:
   CircuitBoard: {fileID: 2113255158}
   errorSound: {fileID: 882529906}
   failCounter: 0
+  player: {fileID: 0}
 --- !u!65 &882529903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8029,6 +8030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robo1
       objectReference: {fileID: 0}
+    - target: {fileID: 5586204434513337538, guid: 371944167bd2e75499f3e4e7c17f4098, type: 3}
+      propertyPath: Healthdrop
+      value: 
+      objectReference: {fileID: 1792365027299454766, guid: c06d6a02475f53b41b97974da86f3464, type: 3}
     - target: {fileID: 5586950765535423306, guid: 371944167bd2e75499f3e4e7c17f4098, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8579881
