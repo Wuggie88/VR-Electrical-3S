@@ -16,6 +16,7 @@ public class CircuitScript : MonoBehaviour
     public float R1Value;
     public float R2Value;
     public float R3Value;
+    public string puzzleType;
 
     //the target needed for the circuit to be correctly solved
     public float target = 5;
