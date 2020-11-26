@@ -6,10 +6,15 @@ public class Snapping : MonoBehaviour
 {
     bool snapped = false;
     GameObject snapObject; // Object to snap.
-    public bool isGrabbed = false;
+    private OVRGrabbable ovrGrabbable;
     public float values = 0;
     public GameObject circuitBoard;
     Rigidbody snapBody;
+
+    void Start()
+    {
+        ovrGrabbable = GetComponent<OVRGrabbable>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,10 +25,9 @@ public class Snapping : MonoBehaviour
             snapBody.isKinematic = true;
         }
 
-        if (isGrabbed)
-        {
+        if (ovrGrabbable.isGrabbed)
             snapped = false;
-        }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -41,6 +45,7 @@ public class Snapping : MonoBehaviour
         }
     }
 
+    // Kan være at denne metode skal fjernes og sætte (isKinematic = false) i isGrabbed funktionen i Update.
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Component")
