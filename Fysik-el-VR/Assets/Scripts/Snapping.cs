@@ -10,6 +10,9 @@ public class Snapping : MonoBehaviour
     public float values = 0;
     public GameObject circuitBoard;
     Rigidbody snapBody;
+    public enum ComponentType { Wire, Battery, Resistor }
+
+    public ComponentType componentType;
 
     void Start()
     {
