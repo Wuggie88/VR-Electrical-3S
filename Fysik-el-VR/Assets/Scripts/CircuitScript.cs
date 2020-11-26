@@ -16,7 +16,9 @@ public class CircuitScript : MonoBehaviour
     public float R1Value;
     public float R2Value;
     public float R3Value;
-    public string puzzleType;
+    public enum PuzzleType { Serie, Parallel }
+
+    public PuzzleType puzzleType;
 
     //the target needed for the circuit to be correctly solved
     public float target = 5;
@@ -27,8 +29,7 @@ public class CircuitScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+
     }
 
     // Update is called once per frame
@@ -37,10 +38,17 @@ public class CircuitScript : MonoBehaviour
         
     }
 
-
     public void setupComponent()
     {
-        StartCoroutine(calculateThisBitch());
+        if (puzzleType == PuzzleType.Serie)
+        {
+            StartCoroutine(calculateThisBitch());
+        }
+        
+        else if (puzzleType == PuzzleType.Parallel)
+        {
+            //insert a calculation form for parallel connections
+        }
 
 
     }

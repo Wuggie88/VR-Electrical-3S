@@ -2452,6 +2452,7 @@ MonoBehaviour:
   errorSound: {fileID: 882529906}
   failCounter: 0
   player: {fileID: 0}
+  robotSpawner: {fileID: 0}
 --- !u!65 &882529903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5737,6 +5738,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1166516368}
     m_Modifications:
+    - target: {fileID: 520721602, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1173894477, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802669356, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077272035, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 180285673721229016, guid: 525836691ba381c4590de9cc248f0028, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5879,7 +5896,7 @@ MonoBehaviour:
   R1Value: 0
   R2Value: 0
   R3Value: 0
-  puzzleType: 
+  puzzleType: 0
   target: 5
   r: []
 --- !u!1001 &1900414232
@@ -8679,7 +8696,7 @@ MonoBehaviour:
   R1Value: 0
   R2Value: 0
   R3Value: 0
-  puzzleType: 
+  puzzleType: 0
   target: 5
   r: []
 --- !u!65 &2113255160
