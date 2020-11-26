@@ -8,6 +8,7 @@ public class DoorButton : MonoBehaviour
     public GameObject LDoor;
     public GameObject CircuitBoard;
     public AudioSource errorSound;
+    public int failCounter = 0;
 
 
     // Start is called before the first frame update
@@ -49,6 +50,8 @@ public class DoorButton : MonoBehaviour
         else
         {
             errorSound.Play();
+
+            StartCoroutine(failed());
         }
         
     }
@@ -86,6 +89,20 @@ public class DoorButton : MonoBehaviour
         CircuitBoard = GameObject.FindGameObjectWithTag("Circuit");
 
         Debug.Log(CircuitBoard.GetComponent<CircuitScript>().target);
+
+
+    }
+
+    IEnumerator failed()
+    {
+        failCounter++;
+
+        yield return new WaitForEndOfFrame();
+
+        if(failCounter >= 5)
+        {
+            //Fucking explode script
+        }
 
 
     }
