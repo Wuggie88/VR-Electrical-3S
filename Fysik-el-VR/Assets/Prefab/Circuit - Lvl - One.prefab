@@ -108,7 +108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5b3504567cd694783d3783d46ae7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
   values: 0
   circuitBoard: {fileID: 8634512252768242267}
 --- !u!1 &1173894476
@@ -219,7 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5b3504567cd694783d3783d46ae7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
   values: 0
   circuitBoard: {fileID: 8634512252768242267}
 --- !u!1 &1802669355
@@ -330,7 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5b3504567cd694783d3783d46ae7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
   values: 0
   circuitBoard: {fileID: 8634512252768242267}
 --- !u!1 &2077272034
@@ -441,7 +438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5b3504567cd694783d3783d46ae7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
   values: 0
   circuitBoard: {fileID: 8634512252768242267}
 --- !u!1 &348808599268010529
@@ -1670,6 +1666,7 @@ GameObject:
   - component: {fileID: 8977964932401336545}
   - component: {fileID: 8716499911330010910}
   - component: {fileID: 1866848568}
+  - component: {fileID: 6311314107121113152}
   m_Layer: 0
   m_Name: Circuit - Lvl - One
   m_TagString: Untagged
@@ -1740,6 +1737,30 @@ MonoBehaviour:
   R1: {fileID: 2077272034}
   R2: {fileID: 1173894476}
   R3: {fileID: 1802669355}
+  batteryValue: 0
+  R1Value: 0
+  R2Value: 0
+  R3Value: 0
+  puzzleType: 
+  target: 5
+  r: []
+--- !u!114 &6311314107121113152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8634512252768242267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b745da9d04bdc4ca1565c5fd3005a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorpoints: 4
+  battery: {fileID: 0}
+  R1: {fileID: 0}
+  R2: {fileID: 0}
+  R3: {fileID: 0}
   batteryValue: 0
   R1Value: 0
   R2Value: 0
