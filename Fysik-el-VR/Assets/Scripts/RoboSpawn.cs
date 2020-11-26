@@ -43,7 +43,7 @@ public class RoboSpawn : MonoBehaviour
         // se om der er det antal Spwans vi gerne vil have
     }
 
-    void SpawnTheRobo()
+    public void SpawnTheRobo()
     {
         // spawn en enkelt robot og check om vi har nået maks
         Instantiate(EnemyRobot, Spawnpoint.transform.position, Spawnpoint.transform.rotation);
