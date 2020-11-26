@@ -28,7 +28,7 @@ public class Healthsystem : MonoBehaviour
     {
         if (this.tag == "Player")
         {
-            //hvis en dødsscene
+            //vis en dødsscene
         }
         else
         {

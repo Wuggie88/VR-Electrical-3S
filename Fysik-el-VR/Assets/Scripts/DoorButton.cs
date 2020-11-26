@@ -9,6 +9,7 @@ public class DoorButton : MonoBehaviour
     public GameObject CircuitBoard;
     public AudioSource errorSound;
     public int failCounter = 0;
+    public GameObject player;
 
 
     // Start is called before the first frame update
@@ -19,6 +20,9 @@ public class DoorButton : MonoBehaviour
 
         //sets the errorSound to what ever audioSource is attached to this object.
         errorSound = GetComponent<AudioSource>();
+
+        player = GameObject.FindGameObjectWithTag("Player");
+
         //test til at dørene virker
         /* 
         if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == 4)
@@ -101,7 +105,15 @@ public class DoorButton : MonoBehaviour
 
         if(failCounter >= 5)
         {
-            //Fucking explode script
+            //maybe play a sound of being electrocuted.
+
+            //put in about how long the sound should play before the player drops dead
+            //yield return new WaitForSeconds(0.5);
+
+            
+            player.GetComponent<Healthsystem>().Death();    
+
+
         }
 
 
