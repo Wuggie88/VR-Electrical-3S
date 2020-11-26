@@ -10,7 +10,7 @@ public class Healthsystem : MonoBehaviour
 
     public GameObject Healthdrop;
 
-    public int heal = 10;
+    public int heal;
 
     // Start is called before the first frame update
     void Start()

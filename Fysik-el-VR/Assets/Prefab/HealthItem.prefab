@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5749601627784684230}
   - component: {fileID: -9004855399733902438}
   - component: {fileID: -7398335641051681211}
+  - component: {fileID: -74352705322686160}
   m_Layer: 0
   m_Name: HealthItem
   m_TagString: Untagged
@@ -127,3 +128,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd1f90b8ee726a24ea5452fc4a2bc731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &-74352705322686160
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792365027299454766}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
