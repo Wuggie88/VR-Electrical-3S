@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Healthsystem : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class Healthsystem : MonoBehaviour
     {
         if (this.tag == "Player")
         {
-            //vis en dødsscene
+            SceneManager.LoadScene(0);
         }
         else
         {
