@@ -12,7 +12,6 @@ public class DoorButton : MonoBehaviour
     public GameObject player;
     public GameObject robotSpawner;
     public GameObject circuitSpawner;
-    public string circuitName;
 
 
     // Start is called before the first frame update
@@ -92,17 +91,8 @@ public class DoorButton : MonoBehaviour
         //Wait for 5 seconds so we're sure that everything is instantiated correctly, and we hope no one can solve this within 5 seconds and press the door button.
         yield return new WaitForSeconds(5);
 
-        //finds the randomly instantiated circuit board by the tag.
-        //CircuitBoard = GameObject.FindGameObjectWithTag("Circuit");
-
-        //circuitName = circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].ToString();
-        
-
-
-
-        Debug.Log("What prefab we try to target " + circuitName + "(Clone)");
-
-        //CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s] + "(Clone)");
+        //sets the circuitboard variable to what ever is spawned in from the spawaner set to this button.
+        //CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].name + "(Clone)");
 
 
 

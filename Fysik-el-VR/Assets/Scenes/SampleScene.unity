@@ -534,7 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a296642dd1a9b469547231c4ab71e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
+  circuits:
   - {fileID: 4561866130779095989, guid: 63f68f55f65ea2140ac82a924bd43136, type: 3}
   - {fileID: 9000507440556091688, guid: 11e3223060fee944eb8884acab63e819, type: 3}
   - {fileID: 7876756342798193816, guid: a11e1697b61491b499e4b5e95e59ef69, type: 3}
@@ -1177,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &478242218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2480,11 +2480,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RDoor: {fileID: 1691602966}
   LDoor: {fileID: 828052199}
-  CircuitBoard: {fileID: 2113255158}
+  CircuitBoard: {fileID: 1866848567}
   errorSound: {fileID: 882529906}
   failCounter: 0
   player: {fileID: 0}
   robotSpawner: {fileID: 0}
+  circuitSpawner: {fileID: 141984612}
 --- !u!65 &882529903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9342,7 +9343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7102737156989681302, guid: 8316ce3516a874e419b6b1d586b4183c, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7102737156989681302, guid: 8316ce3516a874e419b6b1d586b4183c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

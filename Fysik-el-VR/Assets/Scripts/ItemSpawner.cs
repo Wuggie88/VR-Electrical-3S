@@ -25,7 +25,7 @@ public class ItemSpawner : MonoBehaviour
 
     public void SpawnItem()
     {
-        Instantiate(item, inventorySlot.tansform.position, Quaternion.identity);
+        Instantiate(item, inventorySlot.transform.position, Quaternion.identity);
         return;
     }
     
