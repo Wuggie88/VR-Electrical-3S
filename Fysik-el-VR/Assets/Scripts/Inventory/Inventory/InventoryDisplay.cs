@@ -8,7 +8,7 @@ public class InventoryDisplay : MonoBehaviour
     public InventoryObject inventory;
 
     public int x_space;
-    public int y_pace;
+    public int y_space; 
     public int n_column;
 
     Dictionary<InventorySlot, GameObject> itemsDisplayed = new Dictionary<InventorySlot, GameObject>();
@@ -32,17 +32,17 @@ public class InventoryDisplay : MonoBehaviour
         for (int i = 0; i < inventory.Container.Count; i++)
         {
 
-            CreateSlot();        
+            CreateSlot(i);        
 
 
         }
     }
     public Vector3 GetPosition(int i)
     {
-        return new Vector3(x_space * (i % nColumn), (-y_space * (i / n_column)), 0f);
+        return new Vector3(x_space * (i % n_column), (-y_space * (i / n_column)), 0f); 
     }
 
-    public void CreateSlot()
+    public void CreateSlot(int i)
     {
         var obj = Instantiate(inventory.Container[i].item.prefab, Vector3.zero, Quaternion.identity, transform);
         obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
@@ -59,7 +59,7 @@ public class InventoryDisplay : MonoBehaviour
             }
             else
             {
-                CreateSlot(); 
+                CreateSlot(i); 
             }
         }
     }
