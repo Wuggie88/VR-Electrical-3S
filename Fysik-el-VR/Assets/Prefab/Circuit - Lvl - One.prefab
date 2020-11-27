@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   values: 0
   circuitBoard: {fileID: 8634512252768242267}
-  componentType: 1
+  componentType: 0
 --- !u!1 &348808599268010529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1485,10 @@ PrefabInstance:
       propertyPath: circuitBoard
       value: 
       objectReference: {fileID: 8634512252768242267}
+    - target: {fileID: 3706809067245286324, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
+      propertyPath: componentType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
 --- !u!1 &1916974452907859419 stripped
@@ -1568,6 +1572,10 @@ PrefabInstance:
       propertyPath: circuitBoard
       value: 
       objectReference: {fileID: 8634512252768242267}
+    - target: {fileID: 3706809067245286324, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
+      propertyPath: componentType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
 --- !u!1 &1916974451940021169 stripped
@@ -1651,6 +1659,10 @@ PrefabInstance:
       propertyPath: circuitBoard
       value: 
       objectReference: {fileID: 8634512252768242267}
+    - target: {fileID: 3706809067245286324, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
+      propertyPath: componentType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
 --- !u!1 &9169055984025367364 stripped
