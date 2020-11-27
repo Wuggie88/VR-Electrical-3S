@@ -9,6 +9,7 @@ public class LaserShooting : MonoBehaviour
     private OVRGrabbable ovrGrabbable;
     public OVRInput.Button shootingButton;
     public float speed = 1f;
+    public AudioSource lasershot;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class LaserShooting : MonoBehaviour
             GameObject LaserBullet = Instantiate(LaserBulletPrefab, GunCylinder.transform.position, GunCylinder.transform.rotation);
             //LaserBullet.transform.position += transform.forward * speed * Time.deltaTime;
             LaserBullet.GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+            lasershot.Play();
         }
     }
 }
