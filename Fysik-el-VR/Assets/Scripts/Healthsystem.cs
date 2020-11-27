@@ -45,6 +45,9 @@ public class Healthsystem : MonoBehaviour
         if (this.tag == "Player")
         {
             SceneManager.LoadScene(0);
+
+            //else another solution that might be slower however:
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else
         {
