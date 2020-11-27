@@ -53,6 +53,10 @@ public class RoboSpawn : MonoBehaviour
 
     }
 
+    public void testSpawn() {
+        Instantiate(EnemyRobot, Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+    }
+
     void NoMoreBots()
     {
         if (fail == true)

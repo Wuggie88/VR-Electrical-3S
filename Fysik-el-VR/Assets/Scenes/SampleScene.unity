@@ -665,7 +665,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &210240801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2376,13 +2376,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac587fc1aa89f634ebf6ce369409a3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RDoor: {fileID: 1691602966}
-  LDoor: {fileID: 828052199}
+  RDoor: {fileID: 1691592194}
+  LDoor: {fileID: 828073203}
   CircuitBoard: {fileID: 1866848567}
   errorSound: {fileID: 882529906}
   failCounter: 0
   player: {fileID: 0}
-  robotSpawner: {fileID: 0}
+  robotSpawner: {fileID: 1925497399}
   circuitSpawner: {fileID: 141984612}
 --- !u!65 &882529903
 BoxCollider:
@@ -7658,7 +7658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925497399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57427585, y: -1.8164868, z: 4.660507}
+  m_LocalPosition: {x: 7.605, y: -0.21, z: 8.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
