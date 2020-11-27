@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Snapping : MonoBehaviour
 {
-    bool snapped = false;
     GameObject snapObject; // Object to snap.
+    Rigidbody snapBody;
+
+    bool snapped = false;
     private OVRGrabbable ovrGrabbable;
+
     public float values = 0;
     public GameObject circuitBoard;
-    Rigidbody snapBody;
-    public enum ComponentType { Wire, Battery, Resistor }
 
+    public enum ComponentType { Battery, OtherComponent }
     public ComponentType componentType;
 
     void Start()
@@ -29,13 +31,16 @@ public class Snapping : MonoBehaviour
         }
 
         if (ovrGrabbable.isGrabbed)
+        {
             snapped = false;
+            snapBody.isKinematic = false;
+        }
 
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Component")
+        if (componentType == ComponentType.Battery && other.tag == "Battery")
         {
             snapObject = other.gameObject;
             snapBody = snapObject.GetComponent<Rigidbody>();
@@ -44,15 +49,18 @@ public class Snapping : MonoBehaviour
             values = snapObject.GetComponent<componentScript>().value;
 
             circuitBoard.GetComponent<CircuitScript>().setupComponent();
-
         }
-    }
+        else if (componentType == ComponentType.OtherComponent && other.tag == "Component")
+        {
+            snapObject = other.gameObject;
+            snapBody = snapObject.GetComponent<Rigidbody>();
+            snapped = true;
 
-    // Kan være at denne metode skal fjernes og sætte (isKinematic = false) i isGrabbed funktionen i Update.
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Component")
-            snapBody.isKinematic = false;
+            values = snapObject.GetComponent<componentScript>().value;
+
+            circuitBoard.GetComponent<CircuitScript>().setupComponent();
+        }
+
     }
 
 }
