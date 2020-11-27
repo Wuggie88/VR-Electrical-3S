@@ -2055,19 +2055,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.06162845
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.06162845
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: -0.70441604
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.70441604
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_RootOrder
@@ -2075,7 +2075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -5452,6 +5452,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1166516368}
     m_Modifications:
+    - target: {fileID: 520721604, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: circuit
+      value: 
+      objectReference: {fileID: 1866848567}
     - target: {fileID: 3203876359920075906, guid: 525836691ba381c4590de9cc248f0028, type: 3}
       propertyPath: battery
       value: 
@@ -5516,7 +5520,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3203876359920075906, guid: 525836691ba381c4590de9cc248f0028, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 525836691ba381c4590de9cc248f0028, type: 3}
 --- !u!4 &1866848566 stripped
 Transform:

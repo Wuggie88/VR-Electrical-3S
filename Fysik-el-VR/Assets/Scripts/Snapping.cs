@@ -6,6 +6,7 @@ public class Snapping : MonoBehaviour
 {
     GameObject snapObject; // Object to snap.
     Rigidbody snapBody;
+    public GameObject circuit;
 
     bool snapped = false;
     private OVRGrabbable ovrGrabbable;
@@ -27,6 +28,7 @@ public class Snapping : MonoBehaviour
         if (snapped == true)
         {
             snapObject.transform.position = transform.position;
+            snapObject.transform.rotation = transform.rotation;
             snapBody.isKinematic = true;
         }
 
