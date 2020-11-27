@@ -790,6 +790,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 283914489}
+  - component: {fileID: 283914490}
+  - component: {fileID: 283914491}
   m_Layer: 0
   m_Name: InventorySlot
   m_TagString: Untagged
@@ -805,12 +807,39 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283914488}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16739905, y: 1.0108974, z: -0.2541592}
+  m_LocalPosition: {x: 0.16739905, y: 0.75, z: -0.2541592}
   m_LocalScale: {x: 1, y: 1, z: 0.38675743}
   m_Children: []
   m_Father: {fileID: 478242222}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &283914490
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283914488}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &283914491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283914488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a574d3e5517491b43a903aaafb06be34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 6023803279287391590, guid: 3b5a1afe4b9a1a244b747a4b2d20948d, type: 3}
+  inventorySlot: {fileID: 283914488}
 --- !u!1001 &322926661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1170,13 +1199,13 @@ GameObject:
   - component: {fileID: 478242221}
   - component: {fileID: 478242220}
   - component: {fileID: 478242219}
-  - component: {fileID: 478242218}
   m_Layer: 0
   m_Name: InventoryObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< Updated upstream
   m_IsActive: 0
 --- !u!114 &478242218
 MonoBehaviour:
@@ -1192,6 +1221,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 6023803279287391590, guid: 3b5a1afe4b9a1a244b747a4b2d20948d, type: 3}
   inventorySlot: {fileID: 283914488}
+=======
+  m_IsActive: 1
+>>>>>>> Stashed changes
 --- !u!65 &478242219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5851,6 +5883,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9af5e06cc9268f341b6400a3e2f4399a, type: 2}
+    - target: {fileID: 1283990674119723275, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1283990674351458145, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 1607436877789710959, guid: 525836691ba381c4590de9cc248f0028, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5887,6 +5927,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9af5e06cc9268f341b6400a3e2f4399a, type: 2}
+    - target: {fileID: 8391568928696969726, guid: 525836691ba381c4590de9cc248f0028, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8634512252768242267, guid: 525836691ba381c4590de9cc248f0028, type: 3}
       propertyPath: m_Name
       value: Circuit - Lvl - One
@@ -9305,7 +9349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7102737156989681302, guid: 8316ce3516a874e419b6b1d586b4183c, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 7102737156989681302, guid: 8316ce3516a874e419b6b1d586b4183c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
