@@ -609,7 +609,7 @@ MonoBehaviour:
   LaserBulletPrefab: {fileID: 1410728642833045057, guid: f51046b5a75a2714491b232f8a2fbf88, type: 3}
   GunCylinder: {fileID: 6595407628180232427}
   shootingButton: 2105344
-  speed: 200
+  speed: 800
   lasershot: {fileID: 6594259858538338900}
 --- !u!82 &6594259858538338900
 AudioSource:
