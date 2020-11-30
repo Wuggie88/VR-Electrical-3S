@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxLifeTime: 2
-  damage: 0
+  damage: 2
 --- !u!65 &8057294890542475423
 BoxCollider:
   m_ObjectHideFlags: 0

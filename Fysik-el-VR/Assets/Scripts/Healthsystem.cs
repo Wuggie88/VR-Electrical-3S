@@ -2,22 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Healthsystem : MonoBehaviour
 {
-    public int health = 100;
+    public float health = 100;
 
     public int SP;
 
     public GameObject Healthdrop;
 
-    public int heal;
+    public float heal;
+    public Image healthbar;
 
     // Start is called before the first frame update
     void Start()
     {
         SP = GetComponent<RoboSpawn>().NumberOfSpawn;
-
+        UpdateHealthBar();
     }
 
     private void Update()
@@ -28,13 +30,14 @@ public class Healthsystem : MonoBehaviour
     public void HealThePlayer(int heal)
     {
         health += heal;
+        UpdateHealthBar();
     }
 
     public void TakeDamage(int damage)
     {
 
         health -= damage;
-
+        UpdateHealthBar();
 
         if (health <= 0)     Death(); 
 
@@ -56,5 +59,10 @@ public class Healthsystem : MonoBehaviour
             Destroy(this.gameObject);
         }
         
+    }
+
+    public void UpdateHealthBar()
+    {
+        healthbar.fillAmount = health/100;
     }
 }
