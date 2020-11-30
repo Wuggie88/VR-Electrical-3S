@@ -8020,6 +8020,14 @@ PrefabInstance:
       propertyPath: m_snapOffset
       value: 
       objectReference: {fileID: 1411060193}
+    - target: {fileID: 6594259858538338890, guid: 6a42d3d861eb1754f9dd7c507d2f4b18, type: 3}
+      propertyPath: speed
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594259858538338890, guid: 6a42d3d861eb1754f9dd7c507d2f4b18, type: 3}
+      propertyPath: shootingButton
+      value: 8192
+      objectReference: {fileID: 0}
     - target: {fileID: 6595503662732669099, guid: 6a42d3d861eb1754f9dd7c507d2f4b18, type: 3}
       propertyPath: m_Name
       value: SciFiHandGun
