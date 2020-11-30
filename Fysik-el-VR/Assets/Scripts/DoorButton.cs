@@ -25,6 +25,7 @@ public class DoorButton : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
 
+
         //test til at dørene virker
         /* 
         if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == 4)
