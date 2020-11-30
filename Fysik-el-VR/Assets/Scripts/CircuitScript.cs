@@ -62,7 +62,7 @@ public class CircuitScript : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-        doorpoints = batteryValue * (R1Value + R2Value + R3Value);
+        doorpoints = batteryValue / (R1Value + R2Value + R3Value);
 
         Debug.Log(doorpoints);
 
