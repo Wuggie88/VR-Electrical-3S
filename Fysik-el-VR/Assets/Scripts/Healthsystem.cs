@@ -14,6 +14,7 @@ public class Healthsystem : MonoBehaviour
 
     public float heal;
     public Image healthbar;
+    public GameObject filler;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +48,11 @@ public class Healthsystem : MonoBehaviour
     {
         if (this.tag == "Player")
         {
-            SceneManager.LoadScene(0);
+            filler.SetActive(true);
+
+            Invoke("Restart", 3);
+            
+            
 
             //else another solution that might be slower however:
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -59,6 +64,11 @@ public class Healthsystem : MonoBehaviour
             Destroy(this.gameObject);
         }
         
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void UpdateHealthBar()
