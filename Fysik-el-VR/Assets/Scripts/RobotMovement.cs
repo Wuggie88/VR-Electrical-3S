@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class RobotMovement : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class RobotMovement : MonoBehaviour
 
     public GameObject Barrel;
 
+    public Animator RoboAnimator;
+    public bool m_AttackAni = false;
+
+
     private void Awake()
     {
         
@@ -39,6 +44,7 @@ public class RobotMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
 
+
         
     }
 
@@ -49,16 +55,33 @@ public class RobotMovement : MonoBehaviour
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, WhatIsPlayer);
 
         if (!playerInSightRange && !playerInAttackRange)
+        {
+            m_AttackAni = false;
             Patroling();
+        };
+           
         if (playerInSightRange && !playerInAttackRange)
+        {
+            m_AttackAni = false;
             ChasePlayer();
+        };
+           
         if (playerInSightRange && playerInAttackRange)
+        {
+            m_AttackAni = true;
             AttackPlayer();
+        };
+            
+
+        if (m_AttackAni == true) RoboAnimator.SetBool("AttackAni", true);
+            else RoboAnimator.SetBool("AttackAni", false);
     }
 
 
     private void Patroling()
     {
+        
+
         if (!walkPointSet) SearchWalkPoint();
 
         if (walkPointSet)
@@ -89,6 +112,7 @@ public class RobotMovement : MonoBehaviour
 
     private void AttackPlayer()
     {
+        
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);
@@ -99,7 +123,7 @@ public class RobotMovement : MonoBehaviour
            
             Rigidbody rb = Instantiate(projectile, Barrel.transform.position, Barrel.transform.rotation).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            
+
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -118,6 +142,7 @@ public class RobotMovement : MonoBehaviour
 
         if (Health <= 0)
         {
+
             Invoke(nameof(DestroyEnemy), 0.5f);
         }
     }

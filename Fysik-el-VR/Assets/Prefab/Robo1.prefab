@@ -579,7 +579,7 @@ Animator:
   m_GameObject: {fileID: 5585434496611115324}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 08a6fb37a2f216e47bdfa76dcbe8f35e, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 68f975fb24d05e241acbc3af2467759f, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -654,6 +654,9 @@ MonoBehaviour:
   health: 100
   SP: 0
   Healthdrop: {fileID: 1792365027299454766, guid: c06d6a02475f53b41b97974da86f3464, type: 3}
+  heal: 0
+  healthbar: {fileID: 0}
+  filler: {fileID: 0}
 --- !u!114 &5586204434513337537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,6 +687,8 @@ MonoBehaviour:
   playerInAttackRange: 0
   Health: 120
   Barrel: {fileID: 5586074105539182626}
+  RoboAnimator: {fileID: 5536452629656855940}
+  AttackAni: 0
 --- !u!1 &5585518710628843398
 GameObject:
   m_ObjectHideFlags: 0
