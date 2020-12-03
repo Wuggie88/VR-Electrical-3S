@@ -8,7 +8,7 @@ public class Healthsystem : MonoBehaviour
 {
     public float health = 100;
 
-    public int SP;
+    RoboSpawn spawner;
 
     public GameObject Healthdrop;
 
@@ -19,7 +19,7 @@ public class Healthsystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SP = GetComponent<RoboSpawn>().NumberOfSpawn;
+        spawner = FindObjectOfType<RoboSpawn>();
         UpdateHealthBar();
     }
 
@@ -60,8 +60,9 @@ public class Healthsystem : MonoBehaviour
         }
         else
         {
-            
-            SP--;
+            Debug.Log("første");
+            spawner.GetComponent<RoboSpawn>().DecreaseNum();
+            Debug.Log("anden");
             Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
         }

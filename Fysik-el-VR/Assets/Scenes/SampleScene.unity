@@ -733,7 +733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &210240801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5909,7 +5909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  SP: 0
   Healthdrop: {fileID: 1792365027299454766, guid: c06d6a02475f53b41b97974da86f3464, type: 3}
   heal: 0
   healthbar: {fileID: 625462745}
@@ -9939,6 +9938,10 @@ PrefabInstance:
       propertyPath: healthbar
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5586204434513337538, guid: 371944167bd2e75499f3e4e7c17f4098, type: 3}
+      propertyPath: SP
+      value: 
+      objectReference: {fileID: 1925497399}
     - target: {fileID: 5586950765535423306, guid: 371944167bd2e75499f3e4e7c17f4098, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8579881
