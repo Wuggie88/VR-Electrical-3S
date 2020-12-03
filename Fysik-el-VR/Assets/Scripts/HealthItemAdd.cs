@@ -7,7 +7,7 @@ public class HealthItemAdd : MonoBehaviour
     int AddingHealth = 10;
     private int DeSpawnTime = 2;
     private OVRGrabbable ovrGrabbable;
- 
+    GameObject player;
 
     
 
@@ -16,15 +16,15 @@ public class HealthItemAdd : MonoBehaviour
     void Start()
     {
         ovrGrabbable = GetComponent<OVRGrabbable>();
-
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (ovrGrabbable.isGrabbed == true)
+        if (ovrGrabbable.isGrabbed)
         {
-            GetComponent<Healthsystem>().HealThePlayer(AddingHealth);
+            player.GetComponent<Healthsystem>().HealThePlayer(AddingHealth);
 
             Invoke("DestroyTheHI", 1);
         }
