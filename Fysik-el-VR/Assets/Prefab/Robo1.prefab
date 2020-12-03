@@ -681,14 +681,14 @@ MonoBehaviour:
   walkPointRange: 20
   timeBetweenAttacks: 1
   projectile: {fileID: 1410728642833045057, guid: c22fd1fdfcdc3f442a1d9da3330cf1a2, type: 3}
-  sightRange: 15
-  attackRange: 10
+  sightRange: 10
+  attackRange: 5
   playerInSightRange: 1
   playerInAttackRange: 0
   Health: 120
   Barrel: {fileID: 5586074105539182626}
   RoboAnimator: {fileID: 5536452629656855940}
-  AttackAni: 0
+  m_AttackAni: 0
 --- !u!1 &5585518710628843398
 GameObject:
   m_ObjectHideFlags: 0

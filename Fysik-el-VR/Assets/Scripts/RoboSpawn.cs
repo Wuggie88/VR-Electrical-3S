@@ -68,4 +68,9 @@ public class RoboSpawn : MonoBehaviour
         //slut spawn indtil næste level
         //start spawn igen
     }
+
+   public void DecreaseNum()
+   {
+        NumberOfSpawn--;
+   }
 }

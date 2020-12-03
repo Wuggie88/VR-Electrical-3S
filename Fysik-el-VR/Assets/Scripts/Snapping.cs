@@ -7,6 +7,7 @@ public class Snapping : MonoBehaviour
     GameObject snapObject; // Object to snap.
     Rigidbody snapBody;
 
+    bool hasSnapObject = false;
     bool snapped = false;
     private OVRGrabbable ovrGrabbable;
 
@@ -36,32 +37,39 @@ public class Snapping : MonoBehaviour
             snapped = false;
             snapBody.useGravity = true;
         }
-
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (componentType == ComponentType.Battery && other.tag == "Battery")
+        if (hasSnapObject == false)
         {
-            snapObject = other.gameObject;
-            snapBody = snapObject.GetComponent<Rigidbody>();
-            snapped = true;
+            if (componentType == ComponentType.Battery && other.tag == "Battery")
+            {
+                snapObject = other.gameObject;
+                snapBody = snapObject.GetComponent<Rigidbody>();
+                snapped = true;
 
-            values = snapObject.GetComponent<componentScript>().value;
+                values = snapObject.GetComponent<componentScript>().value;
 
-            circuitBoard.GetComponent<CircuitScript>().setupComponent();
+                circuitBoard.GetComponent<CircuitScript>().setupComponent();
+            }
+            else if (componentType == ComponentType.OtherComponent && other.tag == "Component")
+            {
+                snapObject = other.gameObject;
+                snapBody = snapObject.GetComponent<Rigidbody>();
+                snapped = true;
+
+                values = snapObject.GetComponent<componentScript>().value;
+
+                circuitBoard.GetComponent<CircuitScript>().setupComponent();
+            }
+            hasSnapObject = true;
         }
-        else if (componentType == ComponentType.OtherComponent && other.tag == "Component")
-        {
-            snapObject = other.gameObject;
-            snapBody = snapObject.GetComponent<Rigidbody>();
-            snapped = true;
-
-            values = snapObject.GetComponent<componentScript>().value;
-
-            circuitBoard.GetComponent<CircuitScript>().setupComponent();
-        }
-
+        else { return; }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        hasSnapObject = false;
+    }
 }
