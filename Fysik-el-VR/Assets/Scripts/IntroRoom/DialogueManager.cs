@@ -7,12 +7,10 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
-
     public Animator animator;
-
+    
     // Queue = FIFO //
     private Queue<string> sentences;
-
 
     // Start is called before the first frame update
     void Start()
@@ -22,17 +20,17 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        Debug.Log("start dialogue");
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
-
         sentences.Clear();
-
+        Debug.Log("sentences.Clear();");
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-
+        Debug.Log("sentences.Enqueue(sentence);");
         DisplayNextSentences();
     }
 
@@ -61,13 +59,10 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
-
     }
 
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-
     }
-
 }

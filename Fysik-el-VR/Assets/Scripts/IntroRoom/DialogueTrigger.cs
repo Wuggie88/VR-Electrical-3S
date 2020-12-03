@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour{
 
     public void TriggerDialogue()
     {
-        //best to used a singleton but lets us keep it simple//
+        //best to used a singleton but lets keep it simple//
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }
