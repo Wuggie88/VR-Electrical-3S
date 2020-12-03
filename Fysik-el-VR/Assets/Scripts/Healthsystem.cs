@@ -60,6 +60,7 @@ public class Healthsystem : MonoBehaviour
         }
         else
         {
+            
             SP--;
             Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
