@@ -2669,11 +2669,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Nickolai Petersen
+    name: PenisBOT
     sentences:
-    - Hi there my name is Nickolai
-    - I'm here to guide you throurg this dangerous adventure
-    - And wake you up in the morning
+    - Hi there my name is PenisBOT
+    - I'm here to guide you throurg your intro level and i will make sure that you
+      fully understand the concept of the following events.
+    - You will be tested in your scienceskill and agility but you will soon come
+      to  understand. lets start by investigating the room.
 --- !u!114 &1694952091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2721,6 +2723,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1694952088}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
