@@ -70,7 +70,7 @@ public class Healthsystem : MonoBehaviour
         }
         else
         {
-            spawner.GetComponent<RoboSpawn>().DecreaseNum();
+            
             
             StartCoroutine(DeathAni());
 
@@ -83,6 +83,8 @@ public class Healthsystem : MonoBehaviour
         m_DeathAni = true;
        
         yield return new WaitForSeconds(1);
+
+        spawner.GetComponent<RoboSpawn>().DecreaseNum();
 
         Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
 
