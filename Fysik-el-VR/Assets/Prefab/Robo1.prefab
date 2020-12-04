@@ -652,11 +652,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  SP: 0
   Healthdrop: {fileID: 1792365027299454766, guid: c06d6a02475f53b41b97974da86f3464, type: 3}
   heal: 0
   healthbar: {fileID: 0}
   filler: {fileID: 0}
+  RoboAnimator: {fileID: 5536452629656855940}
+  m_DeathAni: 0
 --- !u!114 &5586204434513337537
 MonoBehaviour:
   m_ObjectHideFlags: 0

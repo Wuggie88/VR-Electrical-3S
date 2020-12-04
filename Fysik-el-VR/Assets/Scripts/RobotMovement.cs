@@ -42,10 +42,8 @@ public class RobotMovement : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        RoboAnimator = GetComponent<Animator>();
 
-
-
-        
     }
 
     // Update is called once per frame

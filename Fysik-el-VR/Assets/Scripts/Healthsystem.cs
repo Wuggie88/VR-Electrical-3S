@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Animations;
 
 public class Healthsystem : MonoBehaviour
 {
@@ -16,15 +17,24 @@ public class Healthsystem : MonoBehaviour
     public Image healthbar;
     public GameObject filler;
 
+    public Animator RoboAnimator;
+    public bool m_DeathAni = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         spawner = FindObjectOfType<RoboSpawn>();
         UpdateHealthBar();
+        RoboAnimator = GetComponent<Animator>();
     }
 
     private void Update()
     {
+        
+        if (m_DeathAni == true) RoboAnimator.SetBool("DeathAni", true);
+ 
+
         if (health <= 0) Death();
     }
 
@@ -62,10 +72,22 @@ public class Healthsystem : MonoBehaviour
         {
             spawner.GetComponent<RoboSpawn>().DecreaseNum();
             
-            Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
-            Destroy(this.gameObject);
+            StartCoroutine(DeathAni());
+
         }
         
+    }
+
+    IEnumerator DeathAni()
+    {
+        m_DeathAni = true;
+       
+        yield return new WaitForSeconds(2);
+
+        Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
+
+        Destroy(this.gameObject);
+
     }
 
     public void Restart()
