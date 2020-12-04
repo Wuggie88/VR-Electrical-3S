@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//The Input Menu//
 [System.Serializable]
 public class Dialogue {
 

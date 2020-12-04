@@ -8,6 +8,7 @@ public class CreateObject : MonoBehaviour
     public Transform BattteriSpawnpoint;
     public Transform ResistorSpawnPoint;
 
+
     private GameObject BHint;
     private GameObject RHint;
     private GameObject DHint;
@@ -21,6 +22,7 @@ public class CreateObject : MonoBehaviour
 
     void Start()
     {
+        //Finds the object and deactivating the hints//
         BHint = GameObject.Find("BatteriHint");
         BHint.gameObject.SetActive(false);
 
@@ -31,13 +33,14 @@ public class CreateObject : MonoBehaviour
         DHint.gameObject.SetActive(false);
     }
 
-    void OnTriggerEnter ()
+    public void OnTriggerEnter (Collider other)
     {
+        //Starting the dialog//
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
 
         if (!BatteriIsspawned)
         {
-
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            //Activate the hint & Spawning the batteri//
             BHint.gameObject.SetActive(true);
             Rigidbody batPrefab;
             batPrefab = Instantiate(BatteriPrefab, BattteriSpawnpoint.position, BattteriSpawnpoint.rotation) as Rigidbody;
@@ -45,6 +48,7 @@ public class CreateObject : MonoBehaviour
 
         } else if (!ResistorIsSpawn)
         {
+            //Activate the hint & Spawning the risistor//
             BHint.gameObject.SetActive(false);
             RHint.gameObject.SetActive(true);
             Rigidbody resPrefab;
@@ -52,6 +56,8 @@ public class CreateObject : MonoBehaviour
             ResistorIsSpawn = true;
         }
         else {
+
+            //Activate the door hint//
             RHint.gameObject.SetActive(false);
             DHint.gameObject.SetActive(true);
         }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,33 +8,42 @@ public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
-    public Animator animator;
-    
+    public float typingSpeed;
+    public GameObject diaBox;
+        /*public Animator animator;*/
+
+
     // Queue = FIFO //
     private Queue<string> sentences;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         sentences = new Queue<string>();
     }
 
+
+    //the upstart of the dialogue//
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("start dialogue");
-        animator.SetBool("IsOpen", true);
+        diaBox.SetActive(true);
+        Debug.Log("dialogue Started");
+            /*animator.SetBool("IsOpen", true);*/
 
         nameText.text = dialogue.name;
         sentences.Clear();
-        Debug.Log("sentences.Clear();");
+
+        //looping through the sentence//
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-        Debug.Log("sentences.Enqueue(sentence);");
+
         DisplayNextSentences();
     }
 
+
+    //the insurence of no repeat and playingnext sentence//
     public void DisplayNextSentences()
     {
         if (sentences.Count == 0)
@@ -43,26 +53,32 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+        Debug.Log(sentence);
 
-        //if a coroutine is allready started//
+        //if a coroutine is allready started: STOP IT//
         StopAllCoroutines();
 
         StartCoroutine(TypeSentence(sentence));
     }
 
-    //loop throrgh the words on by one//
+
+    //looping throrgh the sentence words make it look like reallife typing//
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 
+
+    //Kill it//
     void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+            /*animator.SetBool("IsOpen", false);*/
+        diaBox.SetActive(false);
+        Debug.Log("Killed it!!!");
     }
 }
