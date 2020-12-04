@@ -60,9 +60,8 @@ public class Healthsystem : MonoBehaviour
         }
         else
         {
-            Debug.Log("første");
             spawner.GetComponent<RoboSpawn>().DecreaseNum();
-            Debug.Log("anden");
+            
             Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
             Destroy(this.gameObject);
         }

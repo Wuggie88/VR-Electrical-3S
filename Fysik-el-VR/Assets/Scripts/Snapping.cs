@@ -19,7 +19,7 @@ public class Snapping : MonoBehaviour
 
     void Start()
     {
-        ovrGrabbable = GetComponent<OVRGrabbable>();
+        
     }
 
     // Update is called once per frame
@@ -32,7 +32,7 @@ public class Snapping : MonoBehaviour
             snapBody.useGravity = false;
         }
 
-        if (ovrGrabbable.isGrabbed)
+        if (ovrGrabbable != null && ovrGrabbable.isGrabbed)
         {
             snapped = false;
             snapBody.useGravity = true;
@@ -48,6 +48,7 @@ public class Snapping : MonoBehaviour
                 snapObject = other.gameObject;
                 snapBody = snapObject.GetComponent<Rigidbody>();
                 snapped = true;
+                ovrGrabbable = other.GetComponent<OVRGrabbable>();
 
                 values = snapObject.GetComponent<componentScript>().value;
 
@@ -58,6 +59,7 @@ public class Snapping : MonoBehaviour
                 snapObject = other.gameObject;
                 snapBody = snapObject.GetComponent<Rigidbody>();
                 snapped = true;
+                ovrGrabbable = other.GetComponent<OVRGrabbable>();
 
                 values = snapObject.GetComponent<componentScript>().value;
 
