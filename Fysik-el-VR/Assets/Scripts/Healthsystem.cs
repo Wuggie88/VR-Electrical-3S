@@ -82,7 +82,7 @@ public class Healthsystem : MonoBehaviour
     {
         m_DeathAni = true;
        
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
 
         Instantiate(Healthdrop, this.transform.position, this.transform.rotation);
 
