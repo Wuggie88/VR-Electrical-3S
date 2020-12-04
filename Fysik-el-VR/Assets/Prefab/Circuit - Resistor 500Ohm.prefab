@@ -81,7 +81,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5108025314598861858}
-  m_Text: 5 Ohm
+  m_Text: 500 Ohm
   m_OffsetZ: 0
   m_CharacterSize: 0.25
   m_LineSpacing: 1
@@ -104,7 +104,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 412472052389555799, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: value
-      value: 5
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5174190922034694572, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_Name
