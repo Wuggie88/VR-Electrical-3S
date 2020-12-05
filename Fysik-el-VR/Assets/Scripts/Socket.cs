@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Snapping : MonoBehaviour
+public class Socket : MonoBehaviour
 {
     bool snapped = false;
     GameObject snapObject; // Object to snap.

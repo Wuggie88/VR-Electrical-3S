@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574d3e5517491b43a903aaafb06be34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 2221643208882512683, guid: 13ae20b2c6fbc4f47ad9aeea5917fe30, type: 3}
+  item: {fileID: 4112285115299160159, guid: d1104cb1d514f9547bc8498256f73871, type: 3}
   inventorySlot: {fileID: 207216233}
   state: 1
 --- !u!65 &207216236
@@ -1168,7 +1168,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 180453131}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -1669,7 +1669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574d3e5517491b43a903aaafb06be34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4700117793832190749, guid: 88cad9ea232fa9640abd738aa1fde613, type: 3}
+  item: {fileID: 6330452034367854708, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
   inventorySlot: {fileID: 315547024}
   state: 1
 --- !u!65 &315547027
@@ -3017,7 +3017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 657, y: 265}
+  m_AnchoredPosition: {x: 573, y: 237}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625462745
@@ -3499,7 +3499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574d3e5517491b43a903aaafb06be34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 6330452034367854708, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+  item: {fileID: 8657567555561409019, guid: c9714509f02963b489cd4be68b2205b5, type: 3}
   inventorySlot: {fileID: 736255100}
   state: 1
 --- !u!65 &736255103
@@ -5604,7 +5604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574d3e5517491b43a903aaafb06be34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 5174190922034694572, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
+  item: {fileID: 2221643208882512683, guid: 13ae20b2c6fbc4f47ad9aeea5917fe30, type: 3}
   inventorySlot: {fileID: 1029898804}
   state: 1
 --- !u!65 &1029898807
@@ -7548,6 +7548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5754d7113505f4e40a5f2dbcf9b6a216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGrabbed: 0
+  values: 0
+  beltpoint: {fileID: 0}
 --- !u!1001 &1371437941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7731,7 +7734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574d3e5517491b43a903aaafb06be34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 5174190922034694572, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
+  item: {fileID: 5762904975327618539, guid: ec068260aa39b514780ee193e01ebacf, type: 3}
   inventorySlot: {fileID: 1384166812}
   state: 1
 --- !u!65 &1384166815
@@ -8325,7 +8328,7 @@ RectTransform:
   m_GameObject: {fileID: 1424257957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 49.745663, y: 18.5, z: 1}
+  m_LocalScale: {x: 33.577824, y: 14.568565, z: 1}
   m_Children: []
   m_Father: {fileID: 210240804}
   m_RootOrder: 0
@@ -9138,7 +9141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a574d3e5517491b43a903aaafb06be34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 4700117793832190749, guid: 88cad9ea232fa9640abd738aa1fde613, type: 3}
+  item: {fileID: 3045624517778196205, guid: fda1d3f7cabfeb44a8619fcbe00f5b3a, type: 3}
   inventorySlot: {fileID: 1513483090}
   state: 1
 --- !u!65 &1513483093

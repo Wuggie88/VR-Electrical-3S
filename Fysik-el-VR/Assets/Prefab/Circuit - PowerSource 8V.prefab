@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3458644975083475343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6330452034367854708, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_Name
+      value: Circuit - PowerSource 8V
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.3915157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8499983
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.378153
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6670279895078486734, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373419818143394184, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: m_Text
+      value: '8V
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9201567760510336930, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
+      propertyPath: value
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea415e8c81a7d1444a68d52b9efca25b, type: 3}
