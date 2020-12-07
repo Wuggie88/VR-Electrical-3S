@@ -713,7 +713,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254956176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.4300023, y: 0.03999996, z: -4.010002}
+  m_LocalPosition: {x: 1.52, y: 0.03999996, z: -4.010002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1030600287}
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254956176}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 767be0860714e8d49a194f478d79a08a, type: 3}
   m_Name: 
@@ -735,7 +735,7 @@ MonoBehaviour:
   speed: 1
   xPos: 5.6
   yPos: -1
-  zPos: -5
+  zPos: -16
   doorArch: {fileID: 0}
 --- !u!82 &254956179
 AudioSource:
@@ -1540,6 +1540,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5174190922034694572, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
   m_PrefabInstance: {fileID: 4463514778907531535}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &601683838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601683835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d397cb82d3450546b8e3413b417b4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  values: 0
+  circuitBoard: {fileID: 1809421797}
+  componentType: 1
 --- !u!1 &625462743
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,7 +2797,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979747153}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000020861623}
-  m_LocalPosition: {x: -4.5699987, y: 0.03999996, z: -3.0100021}
+  m_LocalPosition: {x: -4.48, y: 0.03999996, z: -3.0100021}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2097864602}
@@ -2796,15 +2811,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979747153}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 767be0860714e8d49a194f478d79a08a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  xPos: -5.65
+  xPos: -5.6
   yPos: -1
-  zPos: -4
+  zPos: -15
   doorArch: {fileID: 0}
 --- !u!82 &979747156
 AudioSource:
@@ -3152,6 +3167,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8104719643662817464, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
   m_PrefabInstance: {fileID: 4463514777962326702}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1062067296 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 596005219382505390, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
+  m_PrefabInstance: {fileID: 4463514777962326702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1062067297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062067294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 991991591fbd261479d265a401d3cdf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RDoor: {fileID: 254956176}
+  LDoor: {fileID: 979747153}
+  CircuitBoard: {fileID: 1809421797}
+  errorSound: {fileID: 1062067296}
+  failCounter: 0
+  player: {fileID: 0}
 --- !u!1001 &1178879290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3829,7 +3867,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336081171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.32, y: -0.365, z: 0.27}
+  m_LocalPosition: {x: 0.278, y: -0.069, z: 0.498}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1670099338}
@@ -5563,6 +5601,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4700117793832190749, guid: 88cad9ea232fa9640abd738aa1fde613, type: 3}
   m_PrefabInstance: {fileID: 4463514778175568915}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1784697929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784697924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d397cb82d3450546b8e3413b417b4b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  values: 0
+  circuitBoard: {fileID: 1809421797}
+  componentType: 0
 --- !u!1001 &1796348839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5862,6 +5915,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fe030f38a8bd8ab43b171fc69d973c5b, type: 3}
   m_PrefabInstance: {fileID: 4463514777628140936}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1809421799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809421797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb107a7e5654374d9f9775437a2c1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorpoints: 4
+  battery: {fileID: 1784697924}
+  R1: {fileID: 601683835}
+  batteryValue: 0
+  R1Value: 0
+  puzzleType: 0
+  target: 5
+  r: []
 --- !u!1 &1888041924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 195936, guid: 56f887c8f9289447895ae8a07be226ec, type: 3}
@@ -8906,30 +8979,6 @@ Halo:
     serializedVersion: 2
     rgba: 4278199295
   m_Size: 0.3
---- !u!114 &4463514777448408260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809421797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b745da9d04bdc4ca1565c5fd3005a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorpoints: 4
-  battery: {fileID: 1784697924}
-  R1: {fileID: 601683835}
-  R2: {fileID: 0}
-  R3: {fileID: 0}
-  batteryValue: 0
-  R1Value: 0
-  R2Value: 0
-  R3Value: 0
-  puzzleType: 0
-  target: 5
-  r: []
 --- !u!1001 &4463514777628140936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9568,13 +9617,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8104719643662817464, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8719689017256938567, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2835743969162802741, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
 --- !u!114 &4463514777986770208
 MonoBehaviour:
@@ -9939,21 +9989,6 @@ PrefabInstance:
     - {fileID: 1772344123919351200, guid: 88cad9ea232fa9640abd738aa1fde613, type: 3}
     - {fileID: 8605624912179996509, guid: 88cad9ea232fa9640abd738aa1fde613, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 88cad9ea232fa9640abd738aa1fde613, type: 3}
---- !u!114 &4463514778175569005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784697924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c5b3504567cd694783d3783d46ae7bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  values: 0
-  circuitBoard: {fileID: 1809421797}
-  componentType: 0
 --- !u!1 &4463514778342686562
 GameObject:
   m_ObjectHideFlags: 0
@@ -10623,21 +10658,6 @@ Halo:
     serializedVersion: 2
     rgba: 4278205183
   m_Size: 0.5
---- !u!114 &4463514778907531529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 601683835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c5b3504567cd694783d3783d46ae7bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  values: 0
-  circuitBoard: {fileID: 1809421797}
-  componentType: 1
 --- !u!1001 &4463514778907531535
 PrefabInstance:
   m_ObjectHideFlags: 0

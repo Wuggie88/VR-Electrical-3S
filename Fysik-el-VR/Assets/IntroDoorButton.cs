@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorButton : MonoBehaviour
+public class IntroDoorButton : MonoBehaviour
 {
     public GameObject RDoor;
     public GameObject LDoor;
@@ -10,8 +10,8 @@ public class DoorButton : MonoBehaviour
     public AudioSource errorSound;
     public int failCounter = 0;
     public GameObject player;
-    public GameObject robotSpawner;
-    public GameObject circuitSpawner;
+    //public GameObject robotSpawner;
+    //public GameObject circuitSpawner;
 
 
     // Start is called before the first frame update
@@ -47,7 +47,7 @@ public class DoorButton : MonoBehaviour
     {
         //checks if the circuitboard is correct, then starts the couroutines for opening the doors.
 
-        if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == CircuitBoard.GetComponent<CircuitScript>().target)
+        if (CircuitBoard.GetComponent<IntroCircuitScript>().doorpoints == CircuitBoard.GetComponent<IntroCircuitScript>().target)
         {
             StartCoroutine(DoorOpens());
             StartCoroutine(DoorOpens2());
@@ -61,7 +61,7 @@ public class DoorButton : MonoBehaviour
 
             StartCoroutine(failed());
         }
-        
+
     }
 
     //sends signal to open the right door as long as it's not in "open" position
@@ -94,11 +94,11 @@ public class DoorButton : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         //sets the circuitboard variable to what ever is spawned in from the spawaner set to this button.
-        CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].name + "(Clone)");
+        //CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].name + "(Clone)");
 
 
 
-        Debug.Log(CircuitBoard.GetComponent<CircuitScript>().target);
+        //Debug.Log(CircuitBoard.GetComponent<CircuitScript>().target);
 
 
     }
@@ -106,21 +106,21 @@ public class DoorButton : MonoBehaviour
     IEnumerator failed()
     {
 
-        robotSpawner.GetComponent<RoboSpawn>().SpawnTheRobo();
+        //robotSpawner.GetComponent<RoboSpawn>().SpawnTheRobo();
 
         failCounter++;
 
         yield return new WaitForEndOfFrame();
 
-        if(failCounter >= 5)
+        if (failCounter >= 10)
         {
             //maybe play a sound of being electrocuted.
 
             //put in about how long the sound should play before the player drops dead
             //yield return new WaitForSeconds(0.5);
 
-            
-            player.GetComponent<Healthsystem>().Death();    
+
+            player.GetComponent<Healthsystem>().Death();
 
 
         }

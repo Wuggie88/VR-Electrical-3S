@@ -17,7 +17,6 @@ public class Socket : MonoBehaviour
         if (snapped == true)
         {
             snapObject.transform.position = transform.position;
-            snapBody.isKinematic = true;
         }
 
         if (isGrabbed)
@@ -33,7 +32,7 @@ public class Socket : MonoBehaviour
             snapObject = other.gameObject;
             snapBody = snapObject.GetComponent<Rigidbody>();
             snapped = true;
-
+            snapBody.useGravity = false;
 
 
         }
@@ -42,7 +41,7 @@ public class Socket : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "weapon")
-            snapBody.isKinematic = false;
+            snapBody.useGravity = true;
     }
 
 }

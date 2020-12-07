@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Snapping : MonoBehaviour
+public class IntroSnapping : MonoBehaviour
 {
     GameObject snapObject; // Object to snap.
     Rigidbody snapBody;
@@ -19,7 +19,7 @@ public class Snapping : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -29,12 +29,13 @@ public class Snapping : MonoBehaviour
         {
             snapObject.transform.position = transform.position;
             snapObject.transform.rotation = transform.rotation;
-            
+            snapBody.useGravity = false;
         }
 
         if (ovrGrabbable != null && ovrGrabbable.isGrabbed)
         {
             snapped = false;
+            snapBody.useGravity = true;
         }
     }
 
@@ -51,8 +52,7 @@ public class Snapping : MonoBehaviour
 
                 values = snapObject.GetComponent<componentScript>().value;
 
-                circuitBoard.GetComponent<CircuitScript>().setupComponent();
-                snapBody.useGravity = false;
+                circuitBoard.GetComponent<IntroCircuitScript>().setupComponent();
             }
             else if (componentType == ComponentType.OtherComponent && other.tag == "Component")
             {
@@ -63,8 +63,7 @@ public class Snapping : MonoBehaviour
 
                 values = snapObject.GetComponent<componentScript>().value;
 
-                circuitBoard.GetComponent<CircuitScript>().setupComponent();
-                snapBody.useGravity = false;
+                circuitBoard.GetComponent<IntroCircuitScript>().setupComponent();
             }
             hasSnapObject = true;
         }
@@ -74,6 +73,5 @@ public class Snapping : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         hasSnapObject = false;
-        snapBody.useGravity = true;
     }
 }

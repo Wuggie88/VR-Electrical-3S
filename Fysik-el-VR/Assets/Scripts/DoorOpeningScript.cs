@@ -18,7 +18,7 @@ public class DoorOpeningScript : MonoBehaviour
     private void Start()
     {
 
-       // Debug.Log("door position: " + transform.position);
+       Debug.Log("door position: " + transform.position);
 
         // get the material of the arch (the first one) and sets the emission color
         // Lav nyt lys til rammen, og smid det ind som doorArch i gameObject.

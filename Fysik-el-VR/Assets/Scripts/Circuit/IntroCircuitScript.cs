@@ -2,21 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CircuitScript : MonoBehaviour
+public class IntroCircuitScript : MonoBehaviour
 {
-
     //the current points of the circuit
     public float doorpoints = 4;
 
 
     public GameObject battery;
     public GameObject R1;
-    public GameObject R2;
-    public GameObject R3;
     public float batteryValue;
     public float R1Value;
-    public float R2Value;
-    public float R3Value;
     public enum PuzzleType { Serie, Parallel }
 
     public PuzzleType puzzleType;
@@ -36,7 +31,7 @@ public class CircuitScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void setupComponent()
@@ -45,7 +40,7 @@ public class CircuitScript : MonoBehaviour
         {
             StartCoroutine(calculateThisBitch());
         }
-        
+
         else if (puzzleType == PuzzleType.Parallel)
         {
             //insert a calculation form for parallel connections
@@ -56,24 +51,15 @@ public class CircuitScript : MonoBehaviour
 
     IEnumerator calculateThisBitch()
     {
-        batteryValue = battery.GetComponent<Snapping>().values;
-        R1Value = R1.GetComponent<Snapping>().values;
-        R2Value = R2.GetComponent<Snapping>().values;
-        R3Value = R3.GetComponent<Snapping>().values;
+        batteryValue = battery.GetComponent<IntroSnapping>().values;
+        R1Value = R1.GetComponent<IntroSnapping>().values;
 
         yield return new WaitForEndOfFrame();
 
-        doorpoints = batteryValue / (R1Value + R2Value + R3Value);
+        doorpoints = batteryValue / (R1Value);
 
         Debug.Log(doorpoints);
 
 
     }
-    /*
-     * Use this as the Circuit script
-     * The door button will set the requirement as "target" so set that in your prefab for what the solution should be.
-     * Use doorpoints, as the current points obtained (This is the thing that should be updated by batteries and resistors being put in the circuit)
-     */
-
-    
 }
