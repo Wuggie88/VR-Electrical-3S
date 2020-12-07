@@ -93,7 +93,7 @@ public class DoorButton : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         //sets the circuitboard variable to what ever is spawned in from the spawaner set to this button.
-        //CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].name + "(Clone)");
+        CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].name + "(Clone)");
 
 
 

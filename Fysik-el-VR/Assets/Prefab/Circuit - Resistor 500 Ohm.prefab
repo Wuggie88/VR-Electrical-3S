@@ -108,7 +108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5174190922034694572, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_Name
-      value: Circuit - Resistor 5Ohm
+      value: Circuit - Resistor 500 Ohm
       objectReference: {fileID: 0}
     - target: {fileID: 5514019573203833622, guid: 4d396a08246b3e74da4b711bf45851ff, type: 3}
       propertyPath: m_LocalPosition.x
