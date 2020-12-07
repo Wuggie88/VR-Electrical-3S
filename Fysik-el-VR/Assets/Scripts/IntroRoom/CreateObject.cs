@@ -15,6 +15,8 @@ public class CreateObject : MonoBehaviour
 
     public Rigidbody BatteriPrefab;
     public Rigidbody ResistorPrefab;
+
+    bool hintTextShown = false;
     public Dialogue dialogue;
 
     private bool BatteriIsspawned = false;
@@ -36,7 +38,11 @@ public class CreateObject : MonoBehaviour
     public void OnTriggerEnter (Collider other)
     {
         //Starting the dialog//
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        if (hintTextShown == false)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            hintTextShown = true;
+        }
 
         if (!BatteriIsspawned)
         {
