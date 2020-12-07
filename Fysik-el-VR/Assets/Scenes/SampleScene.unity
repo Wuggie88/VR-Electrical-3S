@@ -9526,6 +9526,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2835743969162802741, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
+      propertyPath: RDoor
+      value: 
+      objectReference: {fileID: 254956176}
+    - target: {fileID: 2835743969162802741, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
+      propertyPath: LDoor
+      value: 
+      objectReference: {fileID: 979747153}
+    - target: {fileID: 2835743969162802741, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
+      propertyPath: CircuitBoard
+      value: 
+      objectReference: {fileID: 1809421797}
     - target: {fileID: 2911066309719421972, guid: 703cdb7713c39084a8f3ef946d8142eb, type: 3}
       propertyPath: m_RootOrder
       value: 23
