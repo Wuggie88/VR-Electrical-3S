@@ -21,6 +21,13 @@ public class ProjektileEnemy : MonoBehaviour
         {
             other.gameObject.GetComponent<Healthsystem>().TakeDamage(damage);
 
+            Destroy(this.gameObject);
+
+        }
+
+        else
+        {
+            Destroy(this.gameObject);
         }
 
 
