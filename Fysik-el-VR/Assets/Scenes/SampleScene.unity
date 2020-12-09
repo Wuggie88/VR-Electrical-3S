@@ -10120,9 +10120,9 @@ MonoBehaviour:
   dialogue:
     name: NPC
     sentences:
-    - The red area indicate a snap point. your job is to find the component and insert
-      it
-    - 'Countinue so all the emty snap point is filled '
+    - The red areas indicate snap points. your job is to find the components and
+      insert them
+    - Countinue so all the empty snap points are filled
     - Good luck
 --- !u!1 &4463514778446582019
 GameObject:
@@ -10563,11 +10563,11 @@ MonoBehaviour:
   dialogue:
     name: NERO
     sentences:
-    - Hi there my name is NERO
-    - I'm here to guide you throurg your intro level and i will make sure that you
+    - Hi there, my name is NERO
+    - I'm here to guide you through the intro level and I will make sure that you
       fully understand the concept of the following events.
-    - You will be tested in your scienceskill and agility but you will soon come
-      to  understand. lets start by investigating the room.
+    - You will be tested on your science skills and agility but you will soon come
+      to  understand this. lets start by investigating the room.
 --- !u!1 &4463514778904182176
 GameObject:
   m_ObjectHideFlags: 0
