@@ -54,7 +54,7 @@ public class DoorButton : MonoBehaviour
 
         }
 
-
+        //if the solution is incorrect, plays error sound and starts the coroutine for a fail.
         else
         {
             errorSound.Play();
@@ -89,7 +89,7 @@ public class DoorButton : MonoBehaviour
 
     IEnumerator SetupButton()
     {
-        Debug.Log("coroutine started");
+        //Debug.Log("coroutine started");
         //Wait for 5 seconds so we're sure that everything is instantiated correctly, and we hope no one can solve this within 5 seconds and press the door button.
         yield return new WaitForSeconds(5);
 
@@ -98,7 +98,7 @@ public class DoorButton : MonoBehaviour
 
 
 
-        Debug.Log(CircuitBoard.GetComponent<CircuitScript>().target);
+        //Debug.Log(CircuitBoard.GetComponent<CircuitScript>().target);
 
 
     }
@@ -107,11 +107,11 @@ public class DoorButton : MonoBehaviour
     {
 
         robotSpawner.GetComponent<RoboSpawn>().SpawnTheRobo();
-
+        //adds 1 point to the fail counter
         failCounter++;
 
         yield return new WaitForEndOfFrame();
-
+        //checks if the fail counter is equal to or higher than 5, if it is. it will trigger teh death on the player.
         if(failCounter >= 5)
         {
             //maybe play a sound of being electrocuted.
