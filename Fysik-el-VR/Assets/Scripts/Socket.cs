@@ -17,6 +17,7 @@ public class Socket : MonoBehaviour
         if (snapped == true)
         {
             snapObject.transform.position = transform.position;
+            snapObject.transform.rotation = transform.rotation;
         }
 
         if (ovrGrabbable != null && ovrGrabbable.isGrabbed)
