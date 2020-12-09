@@ -17,6 +17,8 @@ public class IntroSnapping : MonoBehaviour
     public enum ComponentType { Battery, OtherComponent }
     public ComponentType componentType;
 
+    public GameObject hint;
+
     void Start()
     {
 
@@ -53,6 +55,7 @@ public class IntroSnapping : MonoBehaviour
                 values = snapObject.GetComponent<componentScript>().value;
 
                 circuitBoard.GetComponent<IntroCircuitScript>().setupComponent();
+                hint.SetActive(false);
             }
             else if (componentType == ComponentType.OtherComponent && other.tag == "Component")
             {
@@ -64,6 +67,7 @@ public class IntroSnapping : MonoBehaviour
                 values = snapObject.GetComponent<componentScript>().value;
 
                 circuitBoard.GetComponent<IntroCircuitScript>().setupComponent();
+                hint.SetActive(false);
             }
             hasSnapObject = true;
         }

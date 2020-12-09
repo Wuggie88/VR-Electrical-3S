@@ -1555,6 +1555,7 @@ MonoBehaviour:
   values: 0
   circuitBoard: {fileID: 1809421797}
   componentType: 1
+  hint: {fileID: 4463514777424234492}
 --- !u!1 &625462743
 GameObject:
   m_ObjectHideFlags: 0
@@ -5615,6 +5616,7 @@ MonoBehaviour:
   values: 0
   circuitBoard: {fileID: 1809421797}
   componentType: 0
+  hint: {fileID: 4463514778904182176}
 --- !u!1001 &1796348839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10649,7 +10651,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4463514778904182176}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.159194, y: 3.1233773, z: -0.8138652}
+  m_LocalPosition: {x: -2.159194, y: 3.1233773, z: -0.837}
   m_LocalScale: {x: 0.3745, y: 0.70911294, z: 0.0513214}
   m_Children: []
   m_Father: {fileID: 7363148438021812594}

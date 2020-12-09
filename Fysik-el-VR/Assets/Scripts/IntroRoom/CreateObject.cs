@@ -55,7 +55,6 @@ public class CreateObject : MonoBehaviour
         } else if (!ResistorIsSpawn)
         {
             //Activate the hint & Spawning the risistor//
-            BHint.gameObject.SetActive(false);
             RHint.gameObject.SetActive(true);
             Rigidbody resPrefab;
             resPrefab = Instantiate(ResistorPrefab, ResistorSpawnPoint.position, ResistorSpawnPoint.rotation) as Rigidbody;
@@ -64,7 +63,6 @@ public class CreateObject : MonoBehaviour
         else {
 
             //Activate the door hint//
-            RHint.gameObject.SetActive(false);
             DHint.gameObject.SetActive(true);
         }
     }
