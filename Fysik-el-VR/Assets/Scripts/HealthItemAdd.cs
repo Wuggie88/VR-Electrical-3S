@@ -8,7 +8,7 @@ public class HealthItemAdd : MonoBehaviour
     private int DeSpawnTime = 2;
     private OVRGrabbable ovrGrabbable;
     GameObject player;
-
+    bool hasGrabbed = false;
     
 
 
@@ -24,9 +24,12 @@ public class HealthItemAdd : MonoBehaviour
     {
         if (ovrGrabbable.isGrabbed)
         {
-            Heal();
+            if (hasGrabbed == false)
+            {
+                hasGrabbed = true;
+                Invoke("Heal", 1);
+            } 
         }
-
     }
 
     void DestroyTheHI()
@@ -37,7 +40,8 @@ public class HealthItemAdd : MonoBehaviour
     void Heal()
     {
         player.GetComponent<Healthsystem>().HealThePlayer(AddingHealth);
-        Invoke("DestroyTheHI", 1);
+        DestroyTheHI();
+        hasGrabbed = false;
     }
 }
 
