@@ -25,6 +25,7 @@ public class Snapping : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // checks if the snapping bool is true, which will snap the component to its snappoint.
         if (snapped == true)
         {
             snapObject.transform.position = transform.position;
@@ -32,6 +33,7 @@ public class Snapping : MonoBehaviour
             
         }
 
+        // checks if the component is grabbed by the vr controller, to release it from being snapped.
         if (ovrGrabbable != null && ovrGrabbable.isGrabbed)
         {
             snapped = false;
@@ -40,31 +42,35 @@ public class Snapping : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (hasSnapObject == false)
+        // checks if there already is an object snapped to the snappoint.
+        if (!hasSnapObject)
         {
+            // if there isn't an object it will check if the snappoints type is the same as the objects tag.
             if (componentType == ComponentType.Battery && other.tag == "Battery")
             {
+                // here it then sets the object as the snapped object, where we then get so of its components
                 snapObject = other.gameObject;
                 snapBody = snapObject.GetComponent<Rigidbody>();
-                snapped = true;
+                snapBody.useGravity = false;
                 ovrGrabbable = other.GetComponent<OVRGrabbable>();
 
+                snapped = true;
+                
+                // here we get the value of the component, which we use for the calculation
                 values = snapObject.GetComponent<componentScript>().value;
-
                 circuitBoard.GetComponent<CircuitScript>().setupComponent();
-                snapBody.useGravity = false;
             }
             else if (componentType == ComponentType.OtherComponent && other.tag == "Component")
             {
                 snapObject = other.gameObject;
                 snapBody = snapObject.GetComponent<Rigidbody>();
-                snapped = true;
+                snapBody.useGravity = false;
                 ovrGrabbable = other.GetComponent<OVRGrabbable>();
 
+                snapped = true;
+                
                 values = snapObject.GetComponent<componentScript>().value;
-
                 circuitBoard.GetComponent<CircuitScript>().setupComponent();
-                snapBody.useGravity = false;
             }
             hasSnapObject = true;
         }
@@ -73,6 +79,7 @@ public class Snapping : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        // when the object leaves the snappoint, its physics is returned to normal
         hasSnapObject = false;
         snapBody.useGravity = true;
     }
