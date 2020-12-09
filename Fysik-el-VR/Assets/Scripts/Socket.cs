@@ -6,7 +6,7 @@ public class Socket : MonoBehaviour
 {
     bool snapped = false;
     GameObject snapObject; // Object to snap.
-    public bool isGrabbed = false;
+    private OVRGrabbable ovrGrabbable;
     public float values = 0;
     public GameObject beltpoint;
     Rigidbody snapBody;
@@ -19,7 +19,7 @@ public class Socket : MonoBehaviour
             snapObject.transform.position = transform.position;
         }
 
-        if (isGrabbed)
+        if (ovrGrabbable != null && ovrGrabbable.isGrabbed)
         {
             snapped = false;
         }
