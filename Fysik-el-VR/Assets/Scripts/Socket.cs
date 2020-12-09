@@ -33,7 +33,7 @@ public class Socket : MonoBehaviour
             snapBody = snapObject.GetComponent<Rigidbody>();
             snapped = true;
             snapBody.useGravity = false;
-
+            ovrGrabbable = other.GetComponent<OVRGrabbable>();
 
         }
     }
