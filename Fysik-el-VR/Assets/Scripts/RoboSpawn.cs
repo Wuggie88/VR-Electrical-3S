@@ -53,6 +53,20 @@ public class RoboSpawn : MonoBehaviour
 
     }
 
+    public void SpawnFailedRobo()
+    {
+        StartCoroutine(SpawnFailedRobots());   
+    }
+
+    public IEnumerator SpawnFailedRobots()
+    {
+        for (int i = 0; i<5; i++)
+        {
+            Instantiate(EnemyRobot, Spawnpoint.transform.position, Spawnpoint.transform.rotation);
+            yield return new WaitForSeconds(1);
+        }  
+    }
+
 
     void NoMoreBots()
     {

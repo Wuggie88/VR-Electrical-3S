@@ -105,8 +105,8 @@ public class DoorButton : MonoBehaviour
 
     IEnumerator failed()
     {
-
-        robotSpawner.GetComponent<RoboSpawn>().SpawnTheRobo();
+        //calls the method that stars the coroutine for spawning new robots on fail
+        robotSpawner.GetComponent<RoboSpawn>().SpawnFailedRobo();
         //adds 1 point to the fail counter
         failCounter++;
 
