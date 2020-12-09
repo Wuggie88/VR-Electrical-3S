@@ -24,9 +24,7 @@ public class HealthItemAdd : MonoBehaviour
     {
         if (ovrGrabbable.isGrabbed)
         {
-            player.GetComponent<Healthsystem>().HealThePlayer(AddingHealth);
-
-            Invoke("DestroyTheHI", 1);
+            Heal();
         }
 
     }
@@ -36,5 +34,10 @@ public class HealthItemAdd : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    void Heal()
+    {
+        player.GetComponent<Healthsystem>().HealThePlayer(AddingHealth);
+        Invoke("DestroyTheHI", 1);
+    }
 }
 
