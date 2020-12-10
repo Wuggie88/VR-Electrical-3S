@@ -12,6 +12,7 @@ public class CreateObject : MonoBehaviour
     private GameObject BHint;
     private GameObject RHint;
     private GameObject DHint;
+    public GameObject tHint;
 
     public Rigidbody BatteriPrefab;
     public Rigidbody ResistorPrefab;
@@ -51,6 +52,7 @@ public class CreateObject : MonoBehaviour
             Rigidbody batPrefab;
             batPrefab = Instantiate(BatteriPrefab, BattteriSpawnpoint.position, BattteriSpawnpoint.rotation) as Rigidbody;
             BatteriIsspawned = true;
+            tHint.gameObject.SetActive(false);
 
         } else if (!ResistorIsSpawn)
         {
@@ -64,6 +66,7 @@ public class CreateObject : MonoBehaviour
 
             //Activate the door hint//
             DHint.gameObject.SetActive(true);
+            tHint.gameObject.SetActive(false);
         }
     }
 }
