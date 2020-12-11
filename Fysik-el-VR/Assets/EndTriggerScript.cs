@@ -16,10 +16,10 @@ public class EndTriggerScript : MonoBehaviour
         //Starting the dialog//
         if(collider.tag == "Player")
         {
-            //Debug.Log("EndTrigger entered");
+            Debug.Log("EndTrigger entered");
             if (endTextShown == false)
             {
-                //Debug.Log("endDialogueStarted");
+                Debug.Log("endDialogueStarted");
                 dialogueManager.GetComponent<DialogueManager>().StartDialogue(dialogue);
                 endTextShown = true;
             }

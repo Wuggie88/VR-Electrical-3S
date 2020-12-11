@@ -17,11 +17,7 @@ public class Spawner : MonoBehaviour
         s = Random.Range(0, circuits.Length);
 
         //instantiates the prefab picked by the random number generator "s"
-        //GameObject Circuit = Instantiate(prefabs[s], transform.position, transform.rotation);
-        GameObject Circuit = Instantiate(circuits[s], transform.position, transform.rotation);
-
-        
-        
+        GameObject Circuit = Instantiate(circuits[s], transform.position, transform.rotation);   
     }
 
     // Update is called once per frame
