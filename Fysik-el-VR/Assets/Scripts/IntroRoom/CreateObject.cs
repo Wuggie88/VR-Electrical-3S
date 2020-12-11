@@ -23,6 +23,8 @@ public class CreateObject : MonoBehaviour
     private bool BatteriIsspawned = false;
     private bool ResistorIsSpawn = false;
 
+    public GameObject dialogueManager;
+
     void Start()
     {
         //Finds the object and deactivating the hints//
@@ -41,7 +43,7 @@ public class CreateObject : MonoBehaviour
         //Starting the dialog//
         if (hintTextShown == false)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            dialogueManager.GetComponent<DialogueManager>().StartDialogue(dialogue);
             hintTextShown = true;
         }
 

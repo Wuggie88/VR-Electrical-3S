@@ -20,7 +20,7 @@ public class EndTriggerScript : MonoBehaviour
             if (endTextShown == false)
             {
                 Debug.Log("endDialogueStarted");
-                dialogueManager.GetComponent<DialogueManager>().StartDialogue(dialogue);
+                dialogueManager.GetComponent<EndDialogueManager>().StartDialogue(dialogue);
                 endTextShown = true;
             }
         }

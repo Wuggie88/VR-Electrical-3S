@@ -4425,7 +4425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1230522100
 Animator:
   serializedVersion: 3
@@ -9899,12 +9899,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2135009428}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bf5f19de1b968c45a985bf281050430, type: 3}
+  m_Script: {fileID: 11500000, guid: 17ee81a96942baa4ab4b1df48f23bcd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 4463514778586370962}
   dialogueText: {fileID: 659748846}
-  typingSpeed: 0
+  typingSpeed: 0.1
   diaBox: {fileID: 1230522099}
 --- !u!4 &2135009430
 Transform:
@@ -11409,6 +11408,7 @@ MonoBehaviour:
       insert them
     - Countinue so all the empty snap points are filled
     - Good luck
+  dialogueManager: {fileID: 4463514777315944189}
 --- !u!1 &4463514778446582019
 GameObject:
   m_ObjectHideFlags: 0
