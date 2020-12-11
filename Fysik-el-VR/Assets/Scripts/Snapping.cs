@@ -66,7 +66,7 @@ public class Snapping : MonoBehaviour
     {
         // when the object leaves the snappoint, its physics is returned to normal
         hasSnapObject = false;
-        snapBody.useGravity = true;
+        other.gameObject.GetComponent<Rigidbody>().useGravity = true;
     }
 
     void Snap(GameObject snapObject)
