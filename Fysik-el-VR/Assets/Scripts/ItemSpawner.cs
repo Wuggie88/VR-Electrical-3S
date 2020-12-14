@@ -9,6 +9,7 @@ public class ItemSpawner : MonoBehaviour
     public bool state = true;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,9 +33,8 @@ public class ItemSpawner : MonoBehaviour
     }
     void OnTriggerExit(Collider other)
     {
-
-        StartCoroutine(SpawnDelay());
-
+            StartCoroutine(SpawnDelay());
+        
     }
     
     IEnumerator SpawnDelay()
