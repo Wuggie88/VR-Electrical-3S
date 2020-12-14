@@ -11406,7 +11406,7 @@ MonoBehaviour:
     sentences:
     - The red areas indicate snap points. your job is to find the components and
       insert them
-    - Countinue so all the empty snap points are filled
+    - Continue so all the empty snap points are filled
     - Good luck
   dialogueManager: {fileID: 4463514777315944189}
 --- !u!1 &4463514778446582019
