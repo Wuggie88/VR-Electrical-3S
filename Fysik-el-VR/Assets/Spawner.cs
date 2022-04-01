@@ -13,11 +13,7 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Picks a random number within the range of the prefabs list.
-        s = Random.Range(0, circuits.Length);
-
-        //instantiates the prefab picked by the random number generator "s"
-        GameObject Circuit = Instantiate(circuits[s], transform.position, transform.rotation);   
+        SpawnCircuit();
     }
 
     // Update is called once per frame
@@ -26,6 +22,14 @@ public class Spawner : MonoBehaviour
         
     }
 
+    public void SpawnCircuit()
+    {
+        //Picks a random number within the range of the prefabs list.
+        s = Random.Range(0, circuits.Length);
+
+        //instantiates the prefab picked by the random number generator "s"
+        GameObject Circuit = Instantiate(circuits[s], transform.position, transform.rotation);
+    }
     
     
 }
