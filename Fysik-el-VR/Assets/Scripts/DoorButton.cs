@@ -89,18 +89,11 @@ public class DoorButton : MonoBehaviour
 
     IEnumerator SetupButton()
     {
-        //Debug.Log("coroutine started");
         //Wait for 5 seconds so we're sure that everything is instantiated correctly, and we hope no one can solve this within 5 seconds and press the door button.
         yield return new WaitForSeconds(5);
 
         //sets the circuitboard variable to what ever is spawned in from the spawaner set to this button.
         CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].name + "(Clone)");
-
-
-
-        //Debug.Log(CircuitBoard.GetComponent<CircuitScript>().target);
-
-
     }
 
     IEnumerator failed()
@@ -111,20 +104,10 @@ public class DoorButton : MonoBehaviour
         failCounter++;
 
         yield return new WaitForEndOfFrame();
-        //checks if the fail counter is equal to or higher than 5, if it is. it will trigger teh death on the player.
+        //checks if the fail counter is equal to or higher than 5, if it is. it will trigger the death on the player.
         if(failCounter >= 5)
-        {
-            //maybe play a sound of being electrocuted.
-
-            //put in about how long the sound should play before the player drops dead
-            //yield return new WaitForSeconds(0.5);
-
-            
+        {           
             player.GetComponent<Healthsystem>().Death();    
-
-
         }
-
-
     }
 }
