@@ -7,11 +7,17 @@ public class DoorButton : MonoBehaviour
     public GameObject RDoor;
     public GameObject LDoor;
     public GameObject CircuitBoard;
+    public GameObject CircuitBoard2;
     public AudioSource errorSound;
     public int failCounter = 0;
     public GameObject player;
     public GameObject robotSpawner;
     public GameObject circuitSpawner;
+    public GameObject circuitSpawner2;
+    public GameObject IndLight;
+    public GameObject IndLight2;
+    Color redGlow;
+    Color greenGlow;
 
 
     // Start is called before the first frame update
@@ -24,7 +30,8 @@ public class DoorButton : MonoBehaviour
         errorSound = GetComponent<AudioSource>();
 
         player = GameObject.FindGameObjectWithTag("Player");
-
+        ColorUtility.TryParseHtmlString("#FF0000", out redGlow);
+        ColorUtility.TryParseHtmlString("#00FF00", out greenGlow);
 
         //test til at dørene virker
         /* 
@@ -47,16 +54,97 @@ public class DoorButton : MonoBehaviour
     {
         //checks if the circuitboard is correct, then starts the couroutines for opening the doors.
 
-        if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == CircuitBoard.GetComponent<CircuitScript>().target)
+        if (CircuitBoard.GetComponent<CircuitScript>().doorpoints == CircuitBoard.GetComponent<CircuitScript>().target &&
+            CircuitBoard2.GetComponent<CircuitScript>().doorpoints == CircuitBoard2.GetComponent<CircuitScript>().target)
         {
+
+            GameObject IndLightDispers = IndLight.transform.Find("Spotlight").gameObject;
+            IndLightDispers.GetComponent<Light>().color = Color.red;
+
+            GameObject LightMat1 = IndLight.transform.Find("Light_01").gameObject;
+            Material Light1 = LightMat1.GetComponent<Renderer>().material;
+            Light1.SetColor("_EmissionColor", greenGlow);
+            Light1.SetColor("_Color", greenGlow);
+
+            GameObject IndLight2Dispers = IndLight2.transform.Find("Spotlight").gameObject;
+            IndLight2Dispers.GetComponent<Light>().color = Color.green;
+
+            GameObject LightMat2 = IndLight2.transform.Find("Light_01").gameObject;
+            Material Light2 = LightMat2.GetComponent<Renderer>().material;
+            Light2.SetColor("_EmissionColor", greenGlow);
+            Light2.SetColor("_Color", greenGlow);
             StartCoroutine(DoorOpens());
             StartCoroutine(DoorOpens2());
 
+        }else if(CircuitBoard.GetComponent<CircuitScript>().doorpoints == CircuitBoard.GetComponent<CircuitScript>().target &&
+            CircuitBoard2.GetComponent<CircuitScript>().doorpoints != CircuitBoard2.GetComponent<CircuitScript>().target)
+        {
+            errorSound.Play();
+
+
+            GameObject IndLightDispers = IndLight.transform.Find("Spotlight").gameObject;
+            IndLightDispers.GetComponent<Light>().color = Color.red;
+
+            GameObject LightMat1 = IndLight.transform.Find("Light_01").gameObject;
+            Material Light1 = LightMat1.GetComponent<Renderer>().material;
+            Light1.SetColor("_EmissionColor", greenGlow);
+            Light1.SetColor("_Color", greenGlow);
+
+            GameObject IndLight2Dispers = IndLight2.transform.Find("Spotlight").gameObject;
+            IndLight2Dispers.GetComponent<Light>().color = Color.green;
+
+            GameObject LightMat2 = IndLight2.transform.Find("Light_01").gameObject;
+            Material Light2 = LightMat2.GetComponent<Renderer>().material;
+            Light2.SetColor("_EmissionColor", redGlow);
+            Light2.SetColor("_Color", redGlow);
+
+
+            StartCoroutine(failed());
+
+        }else if (CircuitBoard.GetComponent<CircuitScript>().doorpoints != CircuitBoard.GetComponent<CircuitScript>().target &&
+            CircuitBoard2.GetComponent<CircuitScript>().doorpoints == CircuitBoard2.GetComponent<CircuitScript>().target)
+        {
+            errorSound.Play();
+
+            GameObject IndLightDispers = IndLight.transform.Find("Spotlight").gameObject;
+            IndLightDispers.GetComponent<Light>().color = Color.red;
+
+            GameObject LightMat1 = IndLight.transform.Find("Light_01").gameObject;
+            Material Light1 = LightMat1.GetComponent<Renderer>().material;
+            Light1.SetColor("_EmissionColor", redGlow);
+            Light1.SetColor("_Color", redGlow);
+
+            GameObject IndLight2Dispers = IndLight2.transform.Find("Spotlight").gameObject;
+            IndLight2Dispers.GetComponent<Light>().color = Color.green;
+
+            GameObject LightMat2 = IndLight2.transform.Find("Light_01").gameObject;
+            Material Light2 = LightMat2.GetComponent<Renderer>().material;
+            Light2.SetColor("_EmissionColor", greenGlow);
+            Light2.SetColor("_Color", greenGlow);
+
+            StartCoroutine(failed());
+
         }
 
-        //if the solution is incorrect, plays error sound and starts the coroutine for a fail.
+        //if all is incorrect
         else
         {
+
+            GameObject IndLightDispers = IndLight.transform.Find("Spotlight").gameObject;
+            IndLightDispers.GetComponent<Light>().color = Color.red;
+
+            GameObject LightMat1 = IndLight.transform.Find("Light_01").gameObject;
+            Material Light1 = LightMat1.GetComponent<Renderer>().material;
+            Light1.SetColor("_EmissionColor", redGlow);
+            Light1.SetColor("_Color", redGlow);
+
+            GameObject IndLight2Dispers = IndLight2.transform.Find("Spotlight").gameObject;
+            IndLight2Dispers.GetComponent<Light>().color = Color.green;
+
+            GameObject LightMat2 = IndLight2.transform.Find("Light_01").gameObject;
+            Material Light2 = LightMat2.GetComponent<Renderer>().material;
+            Light2.SetColor("_EmissionColor", redGlow);
+            Light2.SetColor("_Color", redGlow);
             errorSound.Play();
 
             StartCoroutine(failed());
@@ -94,6 +182,7 @@ public class DoorButton : MonoBehaviour
 
         //sets the circuitboard variable to what ever is spawned in from the spawaner set to this button.
         CircuitBoard = GameObject.Find(circuitSpawner.GetComponent<Spawner>().circuits[circuitSpawner.GetComponent<Spawner>().s].name + "(Clone)");
+        CircuitBoard2 = GameObject.Find(circuitSpawner2.GetComponent<Spawner>().circuits[circuitSpawner2.GetComponent<Spawner>().s].name + "(Clone)");
     }
 
     IEnumerator failed()
