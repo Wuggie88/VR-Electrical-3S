@@ -4524,8 +4524,8 @@ MonoBehaviour:
   dialogue:
     name: Nero
     sentences:
-    - Thank you for playing the prototype of Connection Issue, we hope you enjoyed
-      it!
+    - Thank you for playing Connection Issue, we hope you enjoyed it! Join SDU to
+      make cool games like this one!
   dialogueManager: {fileID: 2135009428}
 --- !u!65 &1038975632
 BoxCollider:
