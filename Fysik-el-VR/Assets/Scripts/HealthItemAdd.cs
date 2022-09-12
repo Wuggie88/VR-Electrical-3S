@@ -5,7 +5,7 @@ using UnityEngine;
 public class HealthItemAdd : MonoBehaviour
 {
     int AddingHealth = 10;
-    private int DeSpawnTime = 2;
+    private int DeSpawnTime = 1;
     private OVRGrabbable ovrGrabbable;
     GameObject player;
     bool hasGrabbed = false;
@@ -27,7 +27,7 @@ public class HealthItemAdd : MonoBehaviour
             if (hasGrabbed == false)
             {
                 hasGrabbed = true;
-                Invoke("Heal", 1);
+                Invoke("Heal", DeSpawnTime);
             } 
         }
     }

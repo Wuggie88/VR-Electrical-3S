@@ -25,7 +25,8 @@ public class Healthsystem : MonoBehaviour
     void Start()
     {
         spawner = FindObjectOfType<RoboSpawn>();
-        UpdateHealthBar();
+        if (this.gameObject.layer == 9)
+            UpdateHealthBar();
         RoboAnimator = GetComponent<Animator>();
     }
 
@@ -42,14 +43,16 @@ public class Healthsystem : MonoBehaviour
     {
         health += heal;
         if (health > 100) health = 100;
-        UpdateHealthBar();
+        if (this.gameObject.layer == 9)
+            UpdateHealthBar();
     }
 
     public void TakeDamage(int damage)
     {
 
         health -= damage;
-        UpdateHealthBar();
+        if (this.gameObject.layer == 9)
+            UpdateHealthBar();
 
         if (health <= 0)     Death(); 
 

@@ -48,7 +48,7 @@ public class CircuitScript : MonoBehaviour
         
         else if (puzzleType == PuzzleType.Parallel)
         {
-            //insert a calculation form for parallel connections
+            StartCoroutine(calculateParallelBitch());
         }
 
 

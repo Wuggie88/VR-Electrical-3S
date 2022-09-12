@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   values: 0
-  circuitBoard: {fileID: 0}
+  circuitBoard: {fileID: 1756436216607205432}
   componentType: 0
 --- !u!1001 &5446371671888544977
 PrefabInstance:
@@ -759,7 +759,7 @@ PrefabInstance:
     - target: {fileID: 3706809067245286324, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
       propertyPath: circuitBoard
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1756436216607205432}
     - target: {fileID: 3706809067245286324, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
       propertyPath: componentType
       value: 1
@@ -846,7 +846,7 @@ PrefabInstance:
     - target: {fileID: 3706809067245286324, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
       propertyPath: circuitBoard
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1756436216607205432}
     - target: {fileID: 3706809067245286324, guid: ccdcfdd6a41a41249a3a679a2ceb4210, type: 3}
       propertyPath: componentType
       value: 1

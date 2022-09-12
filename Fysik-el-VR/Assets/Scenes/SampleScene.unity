@@ -10538,7 +10538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuits:
-  - {fileID: 0}
+  - {fileID: 1756436216607205432, guid: e43ed55eab9e12c4a8d1ac73f8fc4350, type: 3}
   s: 0
 --- !u!4 &2051732294
 Transform:
