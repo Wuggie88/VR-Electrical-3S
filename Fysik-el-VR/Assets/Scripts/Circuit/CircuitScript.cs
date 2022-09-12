@@ -12,7 +12,7 @@ public class CircuitScript : MonoBehaviour
     public GameObject battery;
     public GameObject R1;
     public GameObject R2;
-    public GameObject R3;
+    public GameObject R3 = null;
     public float batteryValue;
     public float R1Value;
     public float R2Value;
@@ -65,7 +65,20 @@ public class CircuitScript : MonoBehaviour
 
         doorpoints = batteryValue / (R1Value + R2Value + R3Value);
 
-        Debug.Log(doorpoints);
+        Debug.Log("Serial door points: " + doorpoints);
+    }
+
+    IEnumerator calculateParallelBitch()
+    {
+        batteryValue = battery.GetComponent<Snapping>().values;
+        R1Value = R1.GetComponent<Snapping>().values;
+        R2Value = R2.GetComponent<Snapping>().values;
+
+        yield return new WaitForEndOfFrame();
+
+        doorpoints = batteryValue * (1 / R1Value + 1 / R2Value);
+
+        Debug.Log("Parallel door points: " + doorpoints);
     }
     /*
      * Use this as the Circuit script
